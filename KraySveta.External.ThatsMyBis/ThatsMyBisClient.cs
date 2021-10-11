@@ -2,7 +2,6 @@
 using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
 using KraySveta.External.ThatsMyBis.Models;
 using Microsoft.Extensions.Configuration;

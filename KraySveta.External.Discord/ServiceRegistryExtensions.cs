@@ -12,7 +12,7 @@ namespace KraySveta.External.Discord
             serviceRegistry.RegisterInstance(cancellationToken ?? CancellationToken.None);
 
             serviceRegistry.RegisterSingleton<IDiscordClientFactory, DiscordClientFactory>();
-            serviceRegistry.RegisterSingleton<IDiscordClient>(sf => sf.GetInstance<IDiscordClientFactory>().Create());
+            serviceRegistry.RegisterSingleton<IDiscordClient>(sf => sf.GetInstance<IDiscordClientFactory>().CreateAsync().GetAwaiter().GetResult());
 
             serviceRegistry.RegisterSingleton<IProvider<IGuild>, GuildProvider>();
             serviceRegistry.RegisterSingleton<ICollectionProvider<IGuildUser>, GuildUsersProvider>();
