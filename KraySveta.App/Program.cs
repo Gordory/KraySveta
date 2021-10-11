@@ -8,12 +8,13 @@ using LightInject.Microsoft.AspNetCore.Hosting;
 using LightInject.Microsoft.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace KraySveta.App
 {
-    public class Program
+    internal static class Program
     {
-        public static async Task Main(string[] args)
+        internal static async Task Main(string[] args)
         {
             var cancellationTokenSource = new CancellationTokenSource();
             Console.CancelKeyPress += (sender, eventArgs) =>
@@ -45,6 +46,11 @@ namespace KraySveta.App
         private static IHostBuilder CreateHostBuilder(string[] args, IServiceContainer container) =>
             Host.CreateDefaultBuilder(args)
                 .UseServiceProviderFactory(new LightInjectServiceProviderFactory(container))
+                .ConfigureLogging(builder =>
+                {
+                    builder.AddConsole();
+                    builder.AddFile("Logs/KraySveta.App.{Date}.log");
+                })
                 .ConfigureWebHostDefaults(webBuilder => 
                 {
                     webBuilder
