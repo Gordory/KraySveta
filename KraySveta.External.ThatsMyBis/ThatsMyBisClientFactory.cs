@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace KraySveta.External.ThatsMyBis
 {
@@ -9,9 +9,9 @@ namespace KraySveta.External.ThatsMyBis
 
     public class ThatsMyBisClientFactory : IThatsMyBisClientFactory
     {
-        private readonly IConfiguration _configuration;
+        private readonly IOptions<ThatsMyBisConfig> _configuration;
 
-        public ThatsMyBisClientFactory(IConfiguration configuration)
+        public ThatsMyBisClientFactory(IOptions<ThatsMyBisConfig> configuration)
         {
             _configuration = configuration;
         }

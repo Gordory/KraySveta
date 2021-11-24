@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.App.RaidGroupsSync
+namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync
 {
     public record SyncRaidGroup
     {

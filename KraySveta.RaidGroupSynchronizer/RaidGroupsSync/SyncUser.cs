@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Discord;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.App.RaidGroupsSync
+namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync
 {
     public class SyncUser
     {

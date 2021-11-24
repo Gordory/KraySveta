@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Discord;
 using Discord.Rest;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace KraySveta.External.Discord
 {
@@ -12,9 +12,9 @@ namespace KraySveta.External.Discord
 
     public class DiscordClientFactory : IDiscordClientFactory
     {
-        private readonly IConfiguration _configuration;
+        private readonly IOptions<DiscordBotConfig> _configuration;
 
-        public DiscordClientFactory(IConfiguration configuration)
+        public DiscordClientFactory(IOptions<DiscordBotConfig> configuration)
         {
             _configuration = configuration;
         }
@@ -27,7 +27,7 @@ namespace KraySveta.External.Discord
                     DefaultRetryMode = RetryMode.AlwaysRetry
                 });
 
-            var botToken = _configuration["Discord:BotToken"];
+            var botToken = _configuration.Value.BotToken;
             await client.LoginAsync(TokenType.Bot, botToken).ConfigureAwait(false);
 
             return client;

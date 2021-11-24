@@ -6,7 +6,7 @@ using Discord;
 using KraySveta.Core;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.App.RaidGroupsSync
+namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync
 {
     public interface ISyncUsersFactory
     {

@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using KraySveta.External.ThatsMyBis.Models;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
 namespace KraySveta.External.ThatsMyBis
@@ -26,9 +26,9 @@ namespace KraySveta.External.ThatsMyBis
         private readonly CookieContainer _cookieContainer;
         private readonly HttpClientHandler _httpClientHandler;
         private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
+        private readonly IOptions<ThatsMyBisConfig> _configuration;
 
-        public ThatsMyBisClient(IConfiguration configuration)
+        public ThatsMyBisClient(IOptions<ThatsMyBisConfig> configuration)
         {
             _configuration = configuration;
             _cookieContainer = new CookieContainer();
@@ -97,7 +97,7 @@ namespace KraySveta.External.ThatsMyBis
                 : "update-other-characters";
 
             var request = new HttpRequestMessage(HttpMethod.Post, $"{BaseUrl}/{GuildInfix}/raid-groups/{updateMethod}");
-            var csrfToken = _configuration["ThatsMyBis:CSRF"];
+            var csrfToken = _configuration.Value.CSRF;
 
             var form = CreateFormWithCharacterIds(characters);
             form.Add(new StringContent(csrfToken), "_token");
@@ -144,8 +144,8 @@ namespace KraySveta.External.ThatsMyBis
 
         private void SetupAuthConfig()
         {
-            var xsrf = _configuration["ThatsMyBis:XSRF"];
-            var session = _configuration["ThatsMyBis:Session"];
+            var xsrf = _configuration.Value.XSRF;
+            var session = _configuration.Value.Session;
 
             _cookieContainer.Add(new Uri("https://thatsmybis.com"), new Cookie("XSRF-TOKEN", xsrf));
             _cookieContainer.Add(new Uri("https://thatsmybis.com"), new Cookie("thats_my_bis_session", session));

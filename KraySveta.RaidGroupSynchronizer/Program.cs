@@ -1,18 +1,20 @@
-using System;
+﻿using System;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using KraySveta.External.Discord;
+using KraySveta.External.ThatsMyBis;
 using LightInject;
-using LightInject.Microsoft.AspNetCore.Hosting;
 using LightInject.Microsoft.DependencyInjection;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace KraySveta.App
+namespace KraySveta.RaidGroupSynchronizer
 {
-    internal static class Program
+    class Program
     {
-        internal static async Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             var cancellationTokenSource = new CancellationTokenSource();
             Console.CancelKeyPress += (sender, eventArgs) =>
@@ -25,6 +27,8 @@ namespace KraySveta.App
             container.RegisterInstance(cancellationTokenSource);
             container.RegisterInstance(cancellationTokenSource.Token);
 
+            container.RegisterFrom<CompositionRoot>();
+
             await CreateHostBuilder(args, container)
                 .Build()
                 .RunAsync(cancellationTokenSource.Token);
@@ -33,16 +37,21 @@ namespace KraySveta.App
         private static IHostBuilder CreateHostBuilder(string[] args, IServiceContainer container) =>
             Host.CreateDefaultBuilder(args)
                 .UseServiceProviderFactory(new LightInjectServiceProviderFactory(container))
+                .ConfigureServices((hostContext, serviceCollection) =>
+                {
+                    serviceCollection.AddHostedService<Daemon>();
+                    serviceCollection.AddOptions();
+                    serviceCollection.Configure<ThatsMyBisConfig>(
+                        hostContext.Configuration.GetSection(ThatsMyBisConfig.ConfigName));
+                    serviceCollection.Configure<DiscordBotConfig>(
+                        hostContext.Configuration.GetSection(DiscordBotConfig.ConfigName));
+                    serviceCollection.Configure<DaemonConfig>(
+                        hostContext.Configuration.GetSection(DaemonConfig.ConfigName));
+                })
                 .ConfigureLogging(builder =>
                 {
                     builder.AddConsole();
-                    builder.AddFile("Logs/KraySveta.App.{Date}.log");
-                })
-                .ConfigureWebHostDefaults(webBuilder => 
-                {
-                    webBuilder
-                        .UseLightInject(container)
-                        .UseStartup<Startup>(); 
+                    builder.AddFile($"Logs/{Assembly.GetExecutingAssembly().FullName}.{{Date}}.log");
                 });
 
         private static IServiceContainer CreateContainer()
