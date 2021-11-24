@@ -12,9 +12,9 @@ using Microsoft.Extensions.Logging;
 
 namespace KraySveta.RaidGroupSynchronizer
 {
-    class Program
+    internal static class Program
     {
-        static async Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
             var cancellationTokenSource = new CancellationTokenSource();
             Console.CancelKeyPress += (sender, eventArgs) =>
@@ -51,7 +51,7 @@ namespace KraySveta.RaidGroupSynchronizer
                 .ConfigureLogging(builder =>
                 {
                     builder.AddConsole();
-                    builder.AddFile($"Logs/{Assembly.GetExecutingAssembly().FullName}.{{Date}}.log");
+                    builder.AddFile($"Logs/{Assembly.GetExecutingAssembly().GetName().Name}.{{Date}}.log");
                 });
 
         private static IServiceContainer CreateContainer()
