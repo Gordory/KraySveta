@@ -47,7 +47,7 @@ namespace KraySveta.RaidGroupSynchronizer
                 }
 
                 var period = _daemonConfig.Value.Period;
-                _logger.LogInformation("Next sync after {Period} in {Date}", period, DateTime.Now + period);
+                _logger.LogInformation("Next sync after {Period} in {Date} (UTC)", period, DateTime.UtcNow + period);
                 await Task.Delay(period, cancellationToken);
             }
         }
