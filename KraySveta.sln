@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Core", "KraySveta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.External.ThatsMyBis", "KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj", "{71B1B795-433D-4E92-81E0-87EA66D64CD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.App", "KraySveta.App\KraySveta.App.csproj", "{686F4EAA-01BD-4F70-803C-993C7E0ED2C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api", "KraySveta.Api\KraySveta.Api.csproj", "{686F4EAA-01BD-4F70-803C-993C7E0ED2C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Tests", "KraySveta.Tests\KraySveta.Tests.csproj", "{8D96CB62-827D-462E-92D2-8EDED04DEA5D}"
 EndProject

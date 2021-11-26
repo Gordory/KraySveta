@@ -2,7 +2,7 @@ using KraySveta.External.Discord;
 using KraySveta.External.ThatsMyBis;
 using LightInject;
 
-namespace KraySveta.App
+namespace KraySveta.Api
 {
     public class CompositionRoot : ICompositionRoot
     {

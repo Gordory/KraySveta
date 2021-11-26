@@ -1,11 +1,11 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using KraySveta.App.Reports.Attendance;
+using KraySveta.Api.Reports.Attendance;
 using KraySveta.Core;
 using KraySveta.External.ThatsMyBis.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KraySveta.App.Controllers
+namespace KraySveta.Api.Controllers
 {
     [ApiController]
     [Route("report")]

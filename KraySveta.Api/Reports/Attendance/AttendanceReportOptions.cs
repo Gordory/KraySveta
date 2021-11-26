@@ -1,4 +1,4 @@
-namespace KraySveta.App.Reports.Attendance
+namespace KraySveta.Api.Reports.Attendance
 {
     public class AttendanceReportOptions : IReportOptions
     {

@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KraySveta.App.Reports
+namespace KraySveta.Api.Reports
 {
     public interface IReportBuilder<TReport, TReportOptions>
         where TReport : IReport

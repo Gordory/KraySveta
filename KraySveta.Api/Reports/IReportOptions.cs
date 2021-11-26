@@ -1,4 +1,4 @@
-namespace KraySveta.App.Reports
+namespace KraySveta.Api.Reports
 {
     public interface IReportOptions
     {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace KraySveta.App.Controllers
+namespace KraySveta.Api.Controllers
 {
     [ApiController]
     [Route("discord/auth")]

@@ -10,7 +10,7 @@ using KraySveta.Core;
 using KraySveta.External.Discord;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.App.Reports.Attendance
+namespace KraySveta.Api.Reports.Attendance
 {
     public interface IAttendanceReportBuilder : IReportBuilder<AttendanceReport, AttendanceReportOptions>
     {

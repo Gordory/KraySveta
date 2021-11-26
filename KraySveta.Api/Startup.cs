@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace KraySveta.App
+namespace KraySveta.Api
 {
     public class Startup
     {
@@ -23,7 +23,7 @@ namespace KraySveta.App
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "KraySveta.App", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "KraySveta.Api", Version = "v1"});
             });
         }
 
@@ -34,7 +34,7 @@ namespace KraySveta.App
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KraySveta.App v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KraySveta.Api v1"));
             }
 
             app.UseHttpsRedirection();

@@ -7,6 +7,7 @@
         <AppConfig>app.config</AppConfig>
         <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+        <RootNamespace>KraySveta.Api</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,6 +21,10 @@
     <ItemGroup>
       <ProjectReference Include="..\KraySveta.External.Discord\KraySveta.External.Discord.csproj" />
       <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ThatsMyBis" />
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">

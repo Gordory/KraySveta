@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace KraySveta.App
+namespace KraySveta.Api
 {
     internal static class Program
     {
@@ -36,7 +36,7 @@ namespace KraySveta.App
                 .ConfigureLogging(builder =>
                 {
                     builder.AddConsole();
-                    builder.AddFile("Logs/KraySveta.App.{Date}.log");
+                    builder.AddFile("Logs/KraySveta.Api.{Date}.log");
                 })
                 .ConfigureWebHostDefaults(webBuilder => 
                 {
