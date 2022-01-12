@@ -4,13 +4,15 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using KraySveta.External.ThatsMyBis.Models;
+using KraySveta.External.ThatsMyBis.Parsers;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 
 namespace KraySveta.External.ThatsMyBis
 {
     public interface IThatsMyBisClient
     {
+        ValueTask<Raid> GetRaidAsync(int id);
+
         ValueTask<Roster> GetRosterAsync();
 
         ValueTask SyncRolesAsync();
@@ -24,25 +26,42 @@ namespace KraySveta.External.ThatsMyBis
         private const string GuildInfix = "3439/krai-sveta";
 
         private readonly CookieContainer _cookieContainer;
-        private readonly HttpClientHandler _httpClientHandler;
         private readonly HttpClient _httpClient;
         private readonly IOptions<ThatsMyBisConfig> _configuration;
+        private readonly IRosterParser _rosterParser;
+        private readonly IRaidParser _raidParser;
 
-        public ThatsMyBisClient(IOptions<ThatsMyBisConfig> configuration)
+        public ThatsMyBisClient(IOptions<ThatsMyBisConfig> configuration, IRosterParser rosterParser, IRaidParser raidParser)
         {
             _configuration = configuration;
+            _rosterParser = rosterParser;
+            _raidParser = raidParser;
+
             _cookieContainer = new CookieContainer();
-            _httpClientHandler = new HttpClientHandler
+            var httpClientHandler = new HttpClientHandler
             {
                 AllowAutoRedirect = false,
                 CookieContainer = _cookieContainer
             };
-            _httpClient = new HttpClient(_httpClientHandler);
+            _httpClient = new HttpClient(httpClientHandler);
 
             SetupAuthConfig();
         }
 
-        public async ValueTask<Roster> GetRosterAsync()
+         public async ValueTask<Raid> GetRaidAsync(int id)
+         {
+             var request = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/{GuildInfix}/raids/{id}");
+             var response = await _httpClient.SendAsync(request);
+             response.EnsureSuccessStatusCode();
+
+             await using var contentStream = await response.Content.ReadAsStreamAsync();
+             using var streamReader = new StreamReader(contentStream);
+
+             var raid = await _raidParser.ParseAsync(streamReader);
+             return raid;
+         }
+
+         public async ValueTask<Roster> GetRosterAsync()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/{GuildInfix}/roster");
             var response = await _httpClient.SendAsync(request);
@@ -51,33 +70,7 @@ namespace KraySveta.External.ThatsMyBis
             await using var contentStream = await response.Content.ReadAsStreamAsync();
             using var streamReader = new StreamReader(contentStream);
 
-            const string commonSign = "var";
-            const string charactersSign = "var characters";
-            const string guildSign = "var guild";
-            const string raidGroupsSign = "var raidGroups";
-
-            string? line;
-            Roster roster = new();
-            while ((line = await streamReader.ReadLineAsync()) != null)
-            {
-                var commonSignIndex = line.IndexOf(commonSign, 0, Math.Min(50, line.Length), StringComparison.OrdinalIgnoreCase);
-                if (commonSignIndex < 0)
-                {
-                    continue;
-                }
-
-                roster.Characters ??= DeserializeFromLine<Character[]>(line, charactersSign);
-                roster.Guild ??= DeserializeFromLine<Guild>(line, guildSign);
-                roster.RaidGroups ??= DeserializeFromLine<RaidGroup[]>(line, raidGroupsSign);
-            }
-
-            if (roster.Characters == null ||
-                roster.Guild == null ||
-                roster.RaidGroups == null)
-            {
-                throw new FormatException("Roster deserialization error. Report error to developer");
-            }
-
+            var roster = await _rosterParser.ParseAsync(streamReader);
             return roster;
         }
 
@@ -120,26 +113,6 @@ namespace KraySveta.External.ThatsMyBis
             }
 
             return form;
-        }
-
-        private static T? DeserializeFromLine<T>(string line, string sign) where T : class
-        {
-            var signIndex = line.IndexOf(sign, StringComparison.OrdinalIgnoreCase);
-            if (signIndex < 0)
-            {
-                return null;
-            }
-
-            const string equalsSign = "=";
-            var equalsSignIndex = line.IndexOf(equalsSign, signIndex + sign.Length, StringComparison.OrdinalIgnoreCase);
-
-            if (equalsSignIndex < 0)
-            {
-                return null;
-            }
-
-            var json = line.Substring(equalsSignIndex + 1).Trim(';', ' ');
-            return JsonConvert.DeserializeObject<T>(json);
         }
 
         private void SetupAuthConfig()
