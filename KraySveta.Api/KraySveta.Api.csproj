@@ -23,10 +23,6 @@
       <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ThatsMyBis" />
-    </ItemGroup>
-
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="; Move all assemblies and related files to lib folder&#xD;&#xA;ROBOCOPY &quot;$(TargetDir) &quot; &quot;$(TargetDir)lib\ &quot; /XF KraySveta*.dll *.exe *.config *.json *.manifest $(AssemblyName)*.manifest /XD lib logs config /E /IS /MOVE&#xD;&#xA;if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25" />
     </Target>

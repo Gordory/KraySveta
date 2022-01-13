@@ -6,9 +6,9 @@ namespace KraySveta.External.ThatsMyBis.Models
 
         public string CharacterName { get; init; }
 
-        public double CreditPercent { get; init; }
+        public double? CreditPercent { get; init; }
 
-        public bool IsItemIgnored { get; init; }
+        public bool IsExcused { get; init; }
 
         public string? Note { get; init; }
 

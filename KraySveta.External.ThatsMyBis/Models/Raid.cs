@@ -16,9 +16,12 @@ namespace KraySveta.External.ThatsMyBis.Models
 
         public bool IsAttendanceIgnored { get; init; }
         
-        public bool IsCanceled { get; init; }
+        public bool IsCancelled { get; init; }
         
         public bool IsArchived { get; init; }
+
+        // TODO Подумать как добавлять, там какая-то глина возвращается
+        // public string[]? LootAssignments { get; set; }
 
         public string[]? WarcraftLogsLinks { get; init; }
 

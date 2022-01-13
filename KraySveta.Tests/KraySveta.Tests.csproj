@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FluentAssertions" Version="6.3.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
         <PackageReference Include="NUnit" Version="3.13.1" />
         <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -15,6 +16,21 @@
 
     <ItemGroup>
       <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="External.ThatsMyBis\Resources\raid.27338.html" />
+      <EmbeddedResource Include="External.ThatsMyBis\Resources\raid.27338.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="External.ThatsMyBis\Resources\test-raid.24133.html" />
+      <EmbeddedResource Include="External.ThatsMyBis\Resources\test-raid.24133.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="External.ThatsMyBis\Resources\raid.16111.html" />
+      <EmbeddedResource Include="External.ThatsMyBis\Resources\raid.16111.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>
