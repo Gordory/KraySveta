@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Tests", "KraySvet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.RaidGroupSynchronizer", "KraySveta.RaidGroupSynchronizer\KraySveta.RaidGroupSynchronizer.csproj", "{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api.Client", "KraySveta.Api.Client\KraySveta.Api.Client.csproj", "{A6EF8E8F-C4F1-4323-B8C7-823AB72FB639}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EF8E8F-C4F1-4323-B8C7-823AB72FB639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EF8E8F-C4F1-4323-B8C7-823AB72FB639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EF8E8F-C4F1-4323-B8C7-823AB72FB639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EF8E8F-C4F1-4323-B8C7-823AB72FB639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
