@@ -7,25 +7,24 @@ using NUnit.Framework;
 namespace KraySveta.Tests.External.ThatsMyBis
 {
     [TestFixture]
-    public class RaidParserTests
+    public class RosterParserTests
     {
-        private RaidParser _raidParser;
+        private RosterParser _rosterParser;
 
         [SetUp]
         public void SetUp()
         {
-            _raidParser = new RaidParser();
+            _rosterParser = new RosterParser();
         }
 
-        [TestCase("raid.16111.html")]
-        [TestCase("raid.27338.html")]
-        [TestCase("raid.test.24133.html")]
+        [TestCase("roster.test.html")]
+        [TestCase("roster.giant.05.02.2022.html")]
         public async Task ParseAsync_Raid_ShouldReturnCorrectRaid(string raidFilename)
         {
             await using var stream = File.OpenRead($"./External.ThatsMyBis/Resources/{raidFilename}");
             using var streamReader = new StreamReader(stream);
 
-            var raid = await _raidParser.ParseAsync(streamReader);
+            var raid = await _rosterParser.ParseAsync(streamReader);
             raid.Should().NotBeNull();
         }
     }

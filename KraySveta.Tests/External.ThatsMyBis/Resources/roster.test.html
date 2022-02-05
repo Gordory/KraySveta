@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:site_name" content="That&#039;s My BIS">
+    <meta property="og:title" content="Roster - That&#039;s My BIS" />
+    <meta property="og:url" content="https://thatsmybis.com/3439/krai-sveta/roster" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A tool for World of Warcraft loot management - easily keep track of your raid&#039;s loot distribution" />
+    <meta property="og:determiner" content="" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_CA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:image" content="https://random-content.s3.amazonaws.com/thatsmybis_logo.png" />
+    <meta property="og:image:url" content="https://random-content.s3.amazonaws.com/thatsmybis_logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="fb:app_id" content="" />
+
+    <!-- JSON-LD markup for schema.org  -->
+    <script type="application/ld+json">
+    {
+        "@context" :    "http://schema.org",
+        "@type" :       "Organization",
+        "name" :        "That&#039;s My BIS",
+        "image" :       "",
+        "description" : "That&#039;s My BIS",
+        "url" :         "https://thatsmybis.com"
+    }
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <title>Roster - That&#039;s My BIS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://thatsmybis.com/images/favicon.ico?v=1" />
+    <meta name="description" content="An online gaming community." />
+    <meta name="keywords" content="thatsmybis,that&#039;s my bis,thatsmybis wow,thatsmybis classic,faerlina,horde,faerlina horde,wow streamers,warcraft streamers,faerlina streamer,faerlina streamers" />
+    <meta name="author" content="https://github.com/Lemmings19/">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#282447">
+    <meta name="msapplication-TileColor" content="#282447">
+    <meta name="theme-color" content="#282447">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173732351-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-173732351-1');</script>
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css" integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
+    <!-- For fancy select stuff like searching -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg==" crossorigin="anonymous" />
+    <!-- styled range slider input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ==" crossorigin="anonymous" />
+    <!-- datetime picker; native datetimepicker is not supported in all browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/css/processed/main.css?id=be93a43dc071116c87ef">
+
+    
+    <!-- Scripts -->
+    <script>
+    window.Laravel = {"csrfToken":"TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US"};
+    </script>
+
+    
+    <noscript>
+        For full functionality of this site it is necessary to enable JavaScript.
+        Here are the <a href="https://www.enable-javascript.com/" target="_blank">
+        instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+
+    <!-- AdSense -->
+    <script data-ad-client="ca-pub-8209165373319221" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ads -->
+    <script>
+    window.nitroAds=window.nitroAds||{createAd:function(){window.nitroAds.queue.push(["createAd",arguments])},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};
+    </script>
+    <script async src="https://s.nitropay.com/ads-921.js"></script>
+</head>
+<body class="">
+    <nav class="navbar navbar-expand-md navbar-dark">
+    <span class="navbar-brand-guild" href="https://thatsmybis.com">
+        <span class="font-weight-bold">
+                        <a href="https://thatsmybis.com" class="text-uncommon"
+                title="">
+                Край Света
+            </a>
+            <a href="https://thatsmybis.com/streamer-mode" class="text-muted small">
+                <span class="fa-fw fal fa-unlock"></span>
+            </a>
+        </span>
+    </span>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+                
+                                    <li class="nav-item ">
+                        <a class="nav-link " href="https://thatsmybis.com/3439/krai-sveta/u/42320/gordory">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle  " href="#" id="wishlistNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Wishlist
+                                                    </a>
+                        <div class="dropdown-menu" aria-labelledby="wishlistNavDropdown">
+                                                            <a class="dropdown-item text-priest-important" href="https://thatsmybis.com/3439/krai-sveta/c/48909/angilda/loot">
+                                    Ангильда
+                                </a>
+                                                            <a class="dropdown-item text-druid-important" href="https://thatsmybis.com/3439/krai-sveta/c/155238/maano/loot">
+                                    Маано
+                                </a>
+                            
+                                                            <div class="dropdown-divider"></div>
+                            
+                            <a class="dropdown-item text-muted" href="https://thatsmybis.com/3439/krai-sveta/c/create?member_id=42320">
+                                <span class="fas fa-user-plus text-muted"></span>
+                                Create character
+                            </a>
+
+                            <a class="dropdown-item text-muted" href="https://thatsmybis.com/3439/krai-sveta/loot/wishlists">
+                                <span class="fas fa-fw fa-scroll-old text-muted"></span>
+                                Sitewide wishlists
+                            </a>
+                        </div>
+                    </li>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  " href="#" id="lootNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Loot
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="lootNavDropdown">
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/assign-loot">
+                                <span class="fas fa-fw fa-sack text-muted"></span>
+                                Assign Loot
+                            </a>
+                                                                            <div class="dropdown dropright">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="adminItemNotes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fas fa-fw fa-sticky-note text-muted"></span>
+                                    Notes
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="adminItemNotes">
+                                                                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/karazhan/edit">
+                                            Karazhan
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/gruuls-lair/edit">
+                                            Gruul&#039;s Lair
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/magtheridons-lair/edit">
+                                            Magtheridon&#039;s Lair
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/serpentshrine-cavern/edit">
+                                            Serpentshrine Cavern
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/tempest-keep/edit">
+                                            Tempest Keep
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/hyjal-summit/edit">
+                                            Hyjal Summit
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/black-temple/edit">
+                                            Black Temple
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/zulaman/edit">
+                                            Zul&#039;Aman
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/sunwell-plateau/edit">
+                                            Sunwell Plateau
+                                        </a>
+                                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/bc-world-bosses/edit">
+                                            World Bosses
+                                        </a>
+                                                                    </div>
+                            </div>
+                        
+                        
+                                                    <div class="dropdown-divider"></div>
+                        
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/karazhan">
+                                Karazhan
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/gruuls-lair">
+                                Gruul&#039;s Lair
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/magtheridons-lair">
+                                Magtheridon&#039;s Lair
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/serpentshrine-cavern">
+                                Serpentshrine Cavern
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/tempest-keep">
+                                Tempest Keep
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/hyjal-summit">
+                                Hyjal Summit
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/black-temple">
+                                Black Temple
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/zulaman">
+                                Zul&#039;Aman
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/sunwell-plateau">
+                                Sunwell Plateau
+                            </a>
+                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/bc-world-bosses">
+                                World Bosses
+                            </a>
+                                            </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  active font-weight-bold" href="#" id="rosterNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Roster
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="rosterNavDropdown">
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/roster">
+                            <span class="fas fa-fw fa-users text-muted"></span>
+                            Roster
+                        </a>
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/roster-stats">
+                            <span class="fas fa-fw fa-user-chart text-muted"></span>
+                            Stats
+                        </a>
+                    </div>
+                </li>
+
+                
+
+                
+                
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  " href="#" id="raidNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Raids
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="raidNavDropdown">
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/assign-loot">
+                            <span class="fas fa-fw fa-sack text-muted"></span>
+                                Assign Loot
+                            </a>
+                                                                            <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/raids/new">
+                            <span class="fas fa-fw fa-calendar-plus text-muted"></span>
+                                Create Raid
+                            </a>
+                                                <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/raids">
+                            <span class="fas fa-fw fa-list text-muted"></span>
+                            List Raids
+                        </a>
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/assign-loot/list">
+                            <span class="fas fa-fw fa-history text-muted"></span>
+                            Old Loot Assignments
+                        </a>
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/raid-groups">
+                            <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                            Raid Groups
+                        </a>
+                                                    <div class="dropdown dropright">
+                                <a title="Only show attendance for a specific raid group" class="dropdown-item dropdown-toggle" href="#" id="raidGroupAttendanceFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fas fa-fw fa-filter text-muted"></span>
+                                    Attendance Filter
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="raidGroupAttendanceFilter">
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="3462" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                10.1 (Свэгги)
+                                            </button>
+                                        </form>
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="3463" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                10.2 (Сырныйкороль)
+                                            </button>
+                                        </form>
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="3465" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                10.3 (Гордори)
+                                            </button>
+                                        </form>
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="4160" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                10.6 (Аккарат)
+                                            </button>
+                                        </form>
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="3461" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                25.1
+                                            </button>
+                                        </form>
+                                                                            <form class="dropdown-item" role="form" method="POST" action="https://thatsmybis.com/3439/krai-sveta/u/set-raid-group-filter">
+                                            <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                                            <input hidden name="raid_group_id" value="3464" />
+                                            <button class="link text-white">
+                                                <span class="fas fa-fw fa-helmet-battle text-muted"></span>
+                                                25.2
+                                            </button>
+                                        </form>
+                                                                    </div>
+                            </div>
+                                            </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link  
+                        dropdown-toggle" href="#" id="adminNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guild
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="adminNavDropdown">
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/settings">
+                                <span class="fas fa-fw fa-cog text-muted"></span>
+                                Settings
+                            </a>
+                        
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/audit-log">
+                            <span class="fas fa-fw fa-clipboard-list-check text-muted"></span>
+                            Audit Log
+                        </a>
+
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/create-characters">
+                            <span class="fas fa-fw fa-user-plus text-muted"></span>
+                                Create Characters
+                            </a>
+                        
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/export">
+                            <span class="fas fa-fw fa-file-export text-muted"></span>
+                            Exports
+                        </a>
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/export/gargul">
+                            <img class="inline-image-icon" src="https://thatsmybis.com/images/gargul_monotone.png"></img>
+                            Export Gargul
+                        </a>
+                        <a class="dropdown-item" target="_blank" href="https://thatsmybis.com/3439/krai-sveta/export/addon/html">
+                            <span class="fas fa-fw fa- text-muted"></span>
+                            Export TMB Tooltips
+                        </a>
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/members">
+                            <span class="fas fa-fw fa-users text-muted"></span>
+                            Members
+                        </a>
+
+                        <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/loot/recipes">
+                            <span class="fas fa-fw fa-book text-muted"></span>
+                            Recipes
+                        </a>
+
+                                                    <a class="dropdown-item" href="https://thatsmybis.com/3439/krai-sveta/roles">
+                            <span class="fab fa-fw fa-discord text-muted"></span>
+                                Roles
+                            </a>
+                                            </div>
+                </li>
+                    </ul>
+        <ul class="navbar-nav">
+                            <li class="nav-item mr-3 d-patreon-block">
+                    <a href="https://thatsmybis.com/donate" target="_blank" class="nav-link active small font-weight-bold text-patreon mt-0"
+                        title="Toss a coin to your web dev">
+                        <span class="fas fa-fw fa-"></span>
+                        Disable Ads
+                    </a>
+                </li>
+                    </ul>
+        <div class="my-2 my-lg-0">
+                            <a href="https://thatsmybis.com/logout"
+                    class="text-white"
+                    onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    <span class="text-grey fal fa-fw fa-sign-out"></span>
+                    Sign Out
+                    <span class="small text-muted">(Gordory)</span>
+                </a>
+
+                <form id="logout-form" action="https://thatsmybis.com/logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" value="TH6qJxXCmmA64OLec06hfjLLlvxQifeLUlv6u1US">
+                </form>
+                    </div>
+    </div>
+</nav>
+
+    
+    <div class="text-center font-weight-bold text-warning">
+        <!-- Sitewide warning message, good for downtime announcements -->
+        <!-- Site will be down for maintenance <span class="js-timestamp" data-timestamp="999999999" data-format="ddd, MMM Do YYYY @ h:mm a"></span> -->
+        <span class="text-muted">
+        </span>
+    </div>
+
+                    
+            <div class="d-poster-970 mb-4" id="top-large-leaderboard-poster"></div>
+        <div class="d-poster-728 mb-4" id="top-leaderboard-poster"></div>
+        <div class="d-poster-320 mb-4" id="top-mobile-banner-poster"></div>
+    
+    
+<div class="container-fluid">
+    <div class="row pt-2 mb-3">
+        <div class="col-12 pr-0 pl-0">
+            <div id="" class="loadingBarContainer d-flex justify-content-center"
+    style="">
+    <div class="flex-column">
+        <div class="loadingBars">
+            <div class="bg-expansion-2"></div>
+            <div class="bg-expansion-2"></div>
+            <div class="bg-expansion-2"></div>
+        </div>
+        <div class="text-center text-expansion-2">
+            Loading...
+        </div>
+    </div>
+</div>
+<div class="pr-2 pl-2" style="display:none;" id="characterDatatable">
+    <ul class="list-inline mb-0">
+        <li class="list-inline-item">
+            <label for="raid_group_filter" class="font-weight-light">
+                <span class="text-muted fas fa-fw fa-helmet-battle"></span>
+                Raid Group
+            </label>
+            <select id="raid_group_filter" class="form-control dark selectpicker">
+                <option value="">—</option>
+                                    <option value="3462" style="color:#b419b4;">
+                        10.1 (Свэгги)
+                    </option>
+                                    <option value="3463" style="color:#a84300;">
+                        10.2 (Сырныйкороль)
+                    </option>
+                                    <option value="3465" style="color:#148822;">
+                        10.3 (Гордори)
+                    </option>
+                                    <option value="4160" style="color:#3498db;">
+                        10.6 (Аккарат)
+                    </option>
+                                    <option value="3461" style="color:#e67e22;">
+                        25.1
+                    </option>
+                                    <option value="3464" style="color:#33ff00;">
+                        25.2
+                    </option>
+                            </select>
+        </li>
+        <li class="list-inline-item">
+            <label for="class_filter" class="font-weight-light">
+                <span class="text-muted fas fa-fw fa-axe-battle"></span>
+                Class
+            </label>
+            <select id="class_filter" class="form-control dark selectpicker">
+                <option value="">—</option>
+                                    <option value="Druid" class="text-druid-important">
+                        Druid
+                    </option>
+                                    <option value="Hunter" class="text-hunter-important">
+                        Hunter
+                    </option>
+                                    <option value="Mage" class="text-mage-important">
+                        Mage
+                    </option>
+                                    <option value="Paladin" class="text-paladin-important">
+                        Paladin
+                    </option>
+                                    <option value="Priest" class="text-priest-important">
+                        Priest
+                    </option>
+                                    <option value="Rogue" class="text-rogue-important">
+                        Rogue
+                    </option>
+                                    <option value="Shaman" class="text-shaman-important">
+                        Shaman
+                    </option>
+                                    <option value="Warlock" class="text-warlock-important">
+                        Warlock
+                    </option>
+                                    <option value="Warrior" class="text-warrior-important">
+                        Warrior
+                    </option>
+                            </select>
+        </li>
+        <li class="list-inline-item">
+            <label for="archetype_filter" class="font-weight-light">
+                <span class="text-muted fas fa-fw fa-chess"></span>
+                Role
+            </label>
+            <select id="archetype_filter" class="form-control dark selectpicker">
+                <option value="">—</option>
+                                    <option value="DPS" class="text-dps-important font-weight-medium">
+                        DPS
+                    </option>
+                                    <option value="Caster" class="text-caster-important font-weight-medium">
+                        Caster DPS
+                    </option>
+                                    <option value="Physical" class="text-physical-important font-weight-medium">
+                        Physical DPS
+                    </option>
+                                    <option value="Heal" class="text-heal-important font-weight-medium">
+                        Healer
+                    </option>
+                                    <option value="Tank" class="text-tank-important font-weight-medium">
+                        Tank
+                    </option>
+                            </select>
+        </li>
+        <li class="list-inline-item">
+            <label for="instance_filter" class="font-weight-light">
+                <span class="text-muted fas fa-fw fa-sack"></span>
+                Dungeon
+            </label>
+            <select id="instance_filter"
+                multiple
+                class="form-control dark selectpicker"
+                data-actions-box="true"
+                data-none-selected-text="—"
+                data-deselect-all-text="Reset"
+                data-select-all-text="All">
+                                    <option value="9">
+                        Karazhan
+                    </option>
+                    <option value="10">
+                        Gruul&#039;s Lair
+                    </option>
+                    <option value="11">
+                        Magtheridon&#039;s Lair
+                    </option>
+                    <option value="12">
+                        Serpentshrine Cavern
+                    </option>
+                    <option value="14">
+                        Tempest Keep
+                    </option>
+                    <option value="13">
+                        Hyjal Summit
+                    </option>
+                    <option value="15">
+                        Black Temple
+                    </option>
+                    <option value="16">
+                        Zul&#039;Aman
+                    </option>
+                    <option value="17">
+                        Sunwell Plateau
+                    </option>
+                    <option value="18">
+                        World Bosses
+                    </option>
+                            </select>
+        </li>
+        <li class="list-inline-item">
+                        <label for="wishlist_filter" class="font-weight-light">
+                <span class="text-muted fas fa-fw fa-scroll-old"></span>
+                Wishlist
+            </label>
+            <select id="wishlist_filter" class="form-control dark selectpicker">
+                                    <option value="1" selected>
+                                                    1*
+                                            </option>
+                                    <option value="2" >
+                                                    2
+                                            </option>
+                                    <option value="3" >
+                                                    3
+                                            </option>
+                                    <option value="4" >
+                                                    4
+                                            </option>
+                                    <option value="5" >
+                                                    5
+                                            </option>
+                                    <option value="6" >
+                                                    6
+                                            </option>
+                                    <option value="7" >
+                                                    7
+                                            </option>
+                                    <option value="8" >
+                                                    8
+                                            </option>
+                                    <option value="9" >
+                                                    9
+                                            </option>
+                                    <option value="10" >
+                                                    10
+                                            </option>
+                                <option value="">
+                    All
+                </option>
+            </select>
+        </li>
+    </ul>
+    <ul class="list-inline mb-0 mt-3">
+        <!-- Hidden as it doesn't take into account the rest of the filters right now
+        <li class="list-inline-item">
+            <span class="toggle-column-default text-link cursor-pointer">
+                Defaults
+            </span>
+        </li>
+        <li class="list-inline-item">&sdot;</li>
+        -->
+                            <li class="list-inline-item">
+                <span class="toggle-column text-link text-unselectable cursor-pointer font-weight-light" data-column="2">
+                    <span class="text-muted fal fa-fw fa-scroll-old"></span>
+                    Wishlist
+                </span>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+            <span class="toggle-column text-link text-unselectable cursor-pointer font-weight-light" data-column="3">
+                <span class="text-muted fal fa-fw fa-sack"></span>
+                Received
+            </span>
+        </li>
+        <!--
+        <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="toggle-column text-link text-unselectable cursor-pointer font-weight-light" data-column="3">
+                <span class="text-muted fas fa-fw fa-book"></span>
+                Recipes
+            </span>
+        </li>
+        -->
+        <!--
+        <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="toggle-column text-link text-unselectable cursor-pointer font-weight-light" data-column="4">
+                <span class="text-muted fab fa-fw fa-discord"></span>
+                Roles
+            </span>
+        </li>
+        -->
+        <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="toggle-column text-link text-unselectable cursor-pointer font-weight-light" data-column="6">
+                <span class="text-muted fal fa-fw fa-comment-alt-lines"></span>
+                Notes
+            </span>
+        </li>
+                    <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+                <span class="js-sort-by-raids-attended text-link text-unselectable cursor-pointer font-weight-light">
+                    <span class="text-muted fal fa-fw fa-helmet-battle"></span>
+                    Sort By Raid Count
+                </span>
+            </li>
+                <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="js-hide-strikethrough-items text-link text-unselectable cursor-pointer font-weight-light">
+                <span class="text-muted fal fa-fw fa-strikethrough"></span>
+                Hide
+                <span class="font-strikethrough">received</span>
+            </span>
+        </li>
+        <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="js-hide-offspec-items text-link text-unselectable cursor-pointer font-weight-light">
+                <span class="text-muted fal fa-fw fa-trash"></span>
+                Hide OS
+            </span>
+        </li>
+        <li class="list-inline-item">&sdot;</li>
+        <li class="list-inline-item">
+            <span class="js-show-all-clipped-items text-link text-unselectable cursor-pointer font-weight-light">
+                <span class="text-muted fal fa-fw fa-eye"></span>
+                Show all loot
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div class="col-12 pb-3 pr-2 pl-2 rounded">
+    <table id="characterTable" class="table table-border table-hover stripe">
+    </table>
+</div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="d-poster-970" id="bottom-large-billboard-poster"></div>
+        <div class="d-poster-728" id="bottom-leaderboard-poster"></div>
+        <div class="d-poster-320" id="bottom-mobile-banner-poster"></div>
+    
+                    <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-xs-left mt-5">
+                <ul class="list-inline mb-2">
+                    
+                    <li class="list-inline-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle font-weight-bold text-patreon-md" id="donateDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fas fa-fw fa-sack"></span>
+                                Support TMB
+                            </a>
+                            <div class="dropdown-menu text-center" aria-labelledby="donateDropdown">
+                                <span class="dropdown-item">
+                                    <a class="text-4 text-patreon patreon-button" href="https://www.patreon.com/lemmings19" target="_blank" title="Patreon donations">
+                                        <span class="fab fa-fw fa-patreon text-white"></span>
+                                        Patreon
+                                    </a>
+                                </span>
+                                <span class="dropdown-item">
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick" />
+                                        <input type="hidden" name="hosted_button_id" value="DFED8CSU2JDS2" />
+                                        <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
+                                        <button class="btn btn-lg btn-paypal strong" name="submit" title="PayPal - The safer, easier way to donate online!">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciPjxwYXRoIGZpbGw9IiMwMDljZGUiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA2LjY5NCAyNi41NTcgQyA2LjYgMjYuOTU3IDYuODgxIDI3LjI1NyA3LjI1NSAyNy4yNTcgTCAxMS4zNzUgMjcuMjU3IEMgMTEuODQ0IDI3LjI1NyAxMi4zMTEgMjYuOTU3IDEyLjQwNSAyNi40NTcgTCAxMi40MDUgMjYuMTU3IEwgMTMuMjQ3IDIwLjk1NyBMIDEzLjI0NyAyMC43NTcgQyAxMy4zNDEgMjAuMjU3IDEzLjgwOSAxOS44NTcgMTQuMjc3IDE5Ljg1NyBMIDE0Ljg0IDE5Ljg1NyBDIDE4Ljg2NCAxOS44NTcgMjEuOTU0IDE4LjE1NyAyMi44OSAxMy4xNTcgQyAyMy4zNTggMTEuMDU3IDIzLjE3MiA5LjM1NyAyMi4wNDggOC4xNTcgQyAyMS43NjcgNy43NTcgMjEuMjk4IDcuNDU3IDIwLjkyNCA3LjE1NyBMIDIwLjkyNCA3LjE1NyI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA4LjE5MiAxNi4zNTcgQyA4LjI4NiAxNS43NTcgOC43NTQgMTUuMzU3IDkuMzE1IDE1LjM1NyBMIDExLjY1NSAxNS4zNTcgQyAxNi4yNDMgMTUuMzU3IDE5LjgwMSAxMy4zNTcgMjAuOTI0IDcuNzU3IEMgMjAuODMxIDcuNDU3IDIwLjkyNCA3LjM1NyAyMC45MjQgNy4xNTciPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBvcGFjaXR5PSIxIiBkPSJNIDkuNTA0IDcuMTU3IEMgOS41OTYgNi44NTcgOS43ODQgNi41NTcgMTAuMDY1IDYuMzU3IEMgMTAuMjUxIDYuMzU3IDEwLjM0NSA2LjI1NyAxMC41MzIgNi4yNTcgTCAxNi43MTEgNi4yNTcgQyAxNy40NjEgNi4yNTcgMTguMjA4IDYuMzU3IDE4Ljc3MiA2LjQ1NyBDIDE4Ljk1OCA2LjQ1NyAxOS4xNDYgNi40NTcgMTkuMzMzIDYuNTU3IEMgMTkuNTIgNi42NTcgMTkuNzA3IDYuNjU3IDE5LjgwMSA2Ljc1NyBDIDE5Ljg5NCA2Ljc1NyAxOS45ODcgNi43NTcgMjAuMDgyIDYuNzU3IEMgMjAuMzYyIDYuODU3IDIwLjY0MyA3LjA1NyAyMC45MjQgNy4xNTcgQyAyMS4yMDQgNS4wNTcgMjAuOTI0IDMuNjU3IDE5LjgwMSAyLjI1NyBDIDE4LjY3NyAwLjg1NyAxNi41MjUgMC4yNTcgMTMuODA5IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNjU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA5LjUwNCA3LjE1NyBaIj48L3BhdGg+PC9zdmc+"
+                                                alt=""
+                                                class="">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMTAwIDMyIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiB4bWxucz0iaHR0cDomI3gyRjsmI3gyRjt3d3cudzMub3JnJiN4MkY7MjAwMCYjeDJGO3N2ZyI+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAxMi4yMzcgMi40NDQgTCA0LjQzNyAyLjQ0NCBDIDMuOTM3IDIuNDQ0IDMuNDM3IDIuODQ0IDMuMzM3IDMuMzQ0IEwgMC4yMzcgMjMuMzQ0IEMgMC4xMzcgMjMuNzQ0IDAuNDM3IDI0LjA0NCAwLjgzNyAyNC4wNDQgTCA0LjUzNyAyNC4wNDQgQyA1LjAzNyAyNC4wNDQgNS41MzcgMjMuNjQ0IDUuNjM3IDIzLjE0NCBMIDYuNDM3IDE3Ljc0NCBDIDYuNTM3IDE3LjI0NCA2LjkzNyAxNi44NDQgNy41MzcgMTYuODQ0IEwgMTAuMDM3IDE2Ljg0NCBDIDE1LjEzNyAxNi44NDQgMTguMTM3IDE0LjM0NCAxOC45MzcgOS40NDQgQyAxOS4yMzcgNy4zNDQgMTguOTM3IDUuNjQ0IDE3LjkzNyA0LjQ0NCBDIDE2LjgzNyAzLjE0NCAxNC44MzcgMi40NDQgMTIuMjM3IDIuNDQ0IFogTSAxMy4xMzcgOS43NDQgQyAxMi43MzcgMTIuNTQ0IDEwLjUzNyAxMi41NDQgOC41MzcgMTIuNTQ0IEwgNy4zMzcgMTIuNTQ0IEwgOC4xMzcgNy4zNDQgQyA4LjEzNyA3LjA0NCA4LjQzNyA2Ljg0NCA4LjczNyA2Ljg0NCBMIDkuMjM3IDYuODQ0IEMgMTAuNjM3IDYuODQ0IDExLjkzNyA2Ljg0NCAxMi42MzcgNy42NDQgQyAxMy4xMzcgOC4wNDQgMTMuMzM3IDguNzQ0IDEzLjEzNyA5Ljc0NCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAzNS40MzcgOS42NDQgTCAzMS43MzcgOS42NDQgQyAzMS40MzcgOS42NDQgMzEuMTM3IDkuODQ0IDMxLjEzNyAxMC4xNDQgTCAzMC45MzcgMTEuMTQ0IEwgMzAuNjM3IDEwLjc0NCBDIDI5LjgzNyA5LjU0NCAyOC4wMzcgOS4xNDQgMjYuMjM3IDkuMTQ0IEMgMjIuMTM3IDkuMTQ0IDE4LjYzNyAxMi4yNDQgMTcuOTM3IDE2LjY0NCBDIDE3LjUzNyAxOC44NDQgMTguMDM3IDIwLjk0NCAxOS4zMzcgMjIuMzQ0IEMgMjAuNDM3IDIzLjY0NCAyMi4xMzcgMjQuMjQ0IDI0LjAzNyAyNC4yNDQgQyAyNy4zMzcgMjQuMjQ0IDI5LjIzNyAyMi4xNDQgMjkuMjM3IDIyLjE0NCBMIDI5LjAzNyAyMy4xNDQgQyAyOC45MzcgMjMuNTQ0IDI5LjIzNyAyMy45NDQgMjkuNjM3IDIzLjk0NCBMIDMzLjAzNyAyMy45NDQgQyAzMy41MzcgMjMuOTQ0IDM0LjAzNyAyMy41NDQgMzQuMTM3IDIzLjA0NCBMIDM2LjEzNyAxMC4yNDQgQyAzNi4yMzcgMTAuMDQ0IDM1LjgzNyA5LjY0NCAzNS40MzcgOS42NDQgWiBNIDMwLjMzNyAxNi44NDQgQyAyOS45MzcgMTguOTQ0IDI4LjMzNyAyMC40NDQgMjYuMTM3IDIwLjQ0NCBDIDI1LjAzNyAyMC40NDQgMjQuMjM3IDIwLjE0NCAyMy42MzcgMTkuNDQ0IEMgMjMuMDM3IDE4Ljc0NCAyMi44MzcgMTcuODQ0IDIzLjAzNyAxNi44NDQgQyAyMy4zMzcgMTQuNzQ0IDI1LjEzNyAxMy4yNDQgMjcuMjM3IDEzLjI0NCBDIDI4LjMzNyAxMy4yNDQgMjkuMTM3IDEzLjY0NCAyOS43MzcgMTQuMjQ0IEMgMzAuMjM3IDE0Ljk0NCAzMC40MzcgMTUuODQ0IDMwLjMzNyAxNi44NDQgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDkuNjQ0IEwgNTEuNjM3IDkuNjQ0IEMgNTEuMjM3IDkuNjQ0IDUwLjkzNyA5Ljg0NCA1MC43MzcgMTAuMTQ0IEwgNDUuNTM3IDE3Ljc0NCBMIDQzLjMzNyAxMC40NDQgQyA0My4yMzcgOS45NDQgNDIuNzM3IDkuNjQ0IDQyLjMzNyA5LjY0NCBMIDM4LjYzNyA5LjY0NCBDIDM4LjIzNyA5LjY0NCAzNy44MzcgMTAuMDQ0IDM4LjAzNyAxMC41NDQgTCA0Mi4xMzcgMjIuNjQ0IEwgMzguMjM3IDI4LjA0NCBDIDM3LjkzNyAyOC40NDQgMzguMjM3IDI5LjA0NCAzOC43MzcgMjkuMDQ0IEwgNDIuNDM3IDI5LjA0NCBDIDQyLjgzNyAyOS4wNDQgNDMuMTM3IDI4Ljg0NCA0My4zMzcgMjguNTQ0IEwgNTUuODM3IDEwLjU0NCBDIDU2LjEzNyAxMC4yNDQgNTUuODM3IDkuNjQ0IDU1LjMzNyA5LjY0NCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi40NDQgTCA1OS45MzcgMi40NDQgQyA1OS40MzcgMi40NDQgNTguOTM3IDIuODQ0IDU4LjgzNyAzLjM0NCBMIDU1LjczNyAyMy4yNDQgQyA1NS42MzcgMjMuNjQ0IDU1LjkzNyAyMy45NDQgNTYuMzM3IDIzLjk0NCBMIDYwLjMzNyAyMy45NDQgQyA2MC43MzcgMjMuOTQ0IDYxLjAzNyAyMy42NDQgNjEuMDM3IDIzLjM0NCBMIDYxLjkzNyAxNy42NDQgQyA2Mi4wMzcgMTcuMTQ0IDYyLjQzNyAxNi43NDQgNjMuMDM3IDE2Ljc0NCBMIDY1LjUzNyAxNi43NDQgQyA3MC42MzcgMTYuNzQ0IDczLjYzNyAxNC4yNDQgNzQuNDM3IDkuMzQ0IEMgNzQuNzM3IDcuMjQ0IDc0LjQzNyA1LjU0NCA3My40MzcgNC4zNDQgQyA3Mi4yMzcgMy4xNDQgNzAuMzM3IDIuNDQ0IDY3LjczNyAyLjQ0NCBaIE0gNjguNjM3IDkuNzQ0IEMgNjguMjM3IDEyLjU0NCA2Ni4wMzcgMTIuNTQ0IDY0LjAzNyAxMi41NDQgTCA2Mi44MzcgMTIuNTQ0IEwgNjMuNjM3IDcuMzQ0IEMgNjMuNjM3IDcuMDQ0IDYzLjkzNyA2Ljg0NCA2NC4yMzcgNi44NDQgTCA2NC43MzcgNi44NDQgQyA2Ni4xMzcgNi44NDQgNjcuNDM3IDYuODQ0IDY4LjEzNyA3LjY0NCBDIDY4LjYzNyA4LjA0NCA2OC43MzcgOC43NDQgNjguNjM3IDkuNzQ0IFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDkwLjkzNyA5LjY0NCBMIDg3LjIzNyA5LjY0NCBDIDg2LjkzNyA5LjY0NCA4Ni42MzcgOS44NDQgODYuNjM3IDEwLjE0NCBMIDg2LjQzNyAxMS4xNDQgTCA4Ni4xMzcgMTAuNzQ0IEMgODUuMzM3IDkuNTQ0IDgzLjUzNyA5LjE0NCA4MS43MzcgOS4xNDQgQyA3Ny42MzcgOS4xNDQgNzQuMTM3IDEyLjI0NCA3My40MzcgMTYuNjQ0IEMgNzMuMDM3IDE4Ljg0NCA3My41MzcgMjAuOTQ0IDc0LjgzNyAyMi4zNDQgQyA3NS45MzcgMjMuNjQ0IDc3LjYzNyAyNC4yNDQgNzkuNTM3IDI0LjI0NCBDIDgyLjgzNyAyNC4yNDQgODQuNzM3IDIyLjE0NCA4NC43MzcgMjIuMTQ0IEwgODQuNTM3IDIzLjE0NCBDIDg0LjQzNyAyMy41NDQgODQuNzM3IDIzLjk0NCA4NS4xMzcgMjMuOTQ0IEwgODguNTM3IDIzLjk0NCBDIDg5LjAzNyAyMy45NDQgODkuNTM3IDIzLjU0NCA4OS42MzcgMjMuMDQ0IEwgOTEuNjM3IDEwLjI0NCBDIDkxLjYzNyAxMC4wNDQgOTEuMzM3IDkuNjQ0IDkwLjkzNyA5LjY0NCBaIE0gODUuNzM3IDE2Ljg0NCBDIDg1LjMzNyAxOC45NDQgODMuNzM3IDIwLjQ0NCA4MS41MzcgMjAuNDQ0IEMgODAuNDM3IDIwLjQ0NCA3OS42MzcgMjAuMTQ0IDc5LjAzNyAxOS40NDQgQyA3OC40MzcgMTguNzQ0IDc4LjIzNyAxNy44NDQgNzguNDM3IDE2Ljg0NCBDIDc4LjczNyAxNC43NDQgODAuNTM3IDEzLjI0NCA4Mi42MzcgMTMuMjQ0IEMgODMuNzM3IDEzLjI0NCA4NC41MzcgMTMuNjQ0IDg1LjEzNyAxNC4yNDQgQyA4NS43MzcgMTQuOTQ0IDg1LjkzNyAxNS44NDQgODUuNzM3IDE2Ljg0NCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5NS4zMzcgMi45NDQgTCA5Mi4xMzcgMjMuMjQ0IEMgOTIuMDM3IDIzLjY0NCA5Mi4zMzcgMjMuOTQ0IDkyLjczNyAyMy45NDQgTCA5NS45MzcgMjMuOTQ0IEMgOTYuNDM3IDIzLjk0NCA5Ni45MzcgMjMuNTQ0IDk3LjAzNyAyMy4wNDQgTCAxMDAuMjM3IDMuMTQ0IEMgMTAwLjMzNyAyLjc0NCAxMDAuMDM3IDIuNDQ0IDk5LjYzNyAyLjQ0NCBMIDk2LjAzNyAyLjQ0NCBDIDk1LjYzNyAyLjQ0NCA5NS40MzcgMi42NDQgOTUuMzM3IDIuOTQ0IFoiPjwvcGF0aD48L3N2Zz4="
+                                                alt="PayPal"
+                                                class="">
+                                        </button>
+                                        <!-- Just fails to load <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />-->
+                                    </form>
+                                </span>
+                                <div class="dropdown-item">
+                                    <a href="https://thatsmybis.com/donate" class="font-weight-bold">
+                                        view donors
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item small">
+                        <a href="https://thatsmybis.com/faq" class="text-muted">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="list-inline-item smaller">
+                        <a href="https://thatsmybis.com/privacy" class="text-muted">
+                            privacy
+                        </a>
+                    </li>
+                    <li class="list-inline-item smaller">
+                        <a href="https://github.com/thatsmybis/thatsmybis" target="_blank" class="text-muted">
+                            <span class="fab fa-github"></span>
+                            Github
+                        </a>
+                    </li>
+                    <li class="list-inline-item smaller">
+                        <!-- NitroPay GDPR preferences -->
+                        <div id="consent-box" style="display:none;">
+                            <span class="text-muted cursor-pointer" onclick="window.__cmp('showModal');">
+                                Update cookie preferences
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-inline-item smaller">
+                        <span data-ccpa-link="1" class="text-muted"></span>
+                    </li>
+                </ul>
+                <!-- who cares? <p class="text-muted small mb-4 mb-lg-0">&copy; That&#039;s My BIS 2021. All Rights Reserved.</p> -->
+            </div>
+
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                <ul class="list-inline mb-0">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+            <div id="video-poster"></div>
+    
+    <!-- Button that sticks to bottom right of page -->
+    <a id="reportBug" href="https://discord.gg/HWNUMKK" target="_blank" class="btn btn-sm btn-light" title="Report a bug">
+        Give Feedback <span class="text-success fal fa-fw fa-comment-dots"></span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+    <!-- Date & time manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <!-- Optionally, moment has ALL locales but is ~361kb instead of ~58kb. Individual locale files are ~5kb -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables-fixedheader/3.1.9/dataTables.fixedHeader.min.js" integrity="sha512-gmPh+Otcht/SQFZF9IWTrVYCmIIz5ZUS3TpNdhxyRnWrQXcBK96mivWWHMg2BkL4vScTk0qbgp0uGcVY6DnLbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Tooltip and popover positioning engine... needed for bootstrap and bootstrap-select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+    <!-- For fancy select stuff like searching select inputs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js" integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg==" crossorigin="anonymous"></script>
+    <!-- HTML santizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.9/purify.min.js" integrity="sha512-VOTFfd4vxPpuE98m9UQTN7j2N2/Blw44lZMhRTnZQqA2gOHq7Yvn5bdIDjjAZuFqqkDtppcjMW+dN3GYbhM94g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Markdown parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.0/marked.min.js" integrity="sha512-9xs4M7yksWUBIo+Jhfs65z7U4QTKNuVeN6Desvi2nXREybeQB3RfTBDELEcXD1HaNlnshG87a1SijMShvp4Zcw==" crossorigin="anonymous"></script>
+    <!-- CSV parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" integrity="sha512-rKFvwjvE4liWPlFnvH4ZhRDfNZ9FOpdkD/BU5gAIA3VS3vOQrQ5BjKgbO3kxebKhHdHcNUHLqxQYSoxee9UwgA==" crossorigin="anonymous"></script>
+    <!-- styled range input slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA==" crossorigin="anonymous"></script>
+    <!-- datetime picker; native datetimepicker is not supported in all browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous"></script>
+    <!-- draggable stuff now works on mobile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous"></script>
+
+    <!-- Wowhead tooltips and stuff -->
+    <script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, dropChance: true, iconSize: 'small', hide: { maxstack: true, ilvl: false, sellprice: true }};</script>
+    <script src="https://wow.zamimg.com/widgets/power.js"></script>
+    <style>/* override some wowhead item quality colors to be higher contrast */.q3 {color: #057ffa !important;} .q4 {color: #ab4aed !important;}</style>
+
+    <script>
+                    var expansionId = 2;
+                            var wowheadSubdomain = "tbc";
+                    
+                    var locale = "";
+            var wowheadLocale = "";
+
+            var headerBoss      = "Boss";
+            var headerCharacter = "Character";
+            var headerPrios     = "Prios";
+            var headerPrioNotes = "Prio Notes";
+            var headerWishlist  = "Wishlist";
+            var headerLoot      = "Loot";
+            var headerReceived  = "Received";
+            var headerRecipes   = "Recipes";
+            var headerNotes     = "Notes";
+
+            var localeAlt = "alt";
+            </script>
+
+    <script src="/js/processed/helpers.js?id=997f672e4c81cb10b28b"></script>
+    <script src="/js/processed/autocomplete.js?id=8b8ecc74a93a60e2e26e"></script>
+
+    <script>
+        <!-- NitroPay GDPR preferences https://docs.nitropay.com/en/articles/3623674-creating-a-link-to-open-gdpr-preferences -->
+        if (document.getElementById("consent-box")) {
+            if (window["nitroAds"] && window["nitroAds"].loaded) {
+                document.getElementById("consent-box").style.display = (window["__tcfapi"] ? "" : "none");
+            } else {
+                document.addEventListener(
+                    "nitroAds.loaded",
+                    () => document.getElementById("consent-box").style.display = (window["__tcfapi"] ? "" : "none")
+                );
+            }
+        }
+        window['nitroAds'].createAd('video-poster', {
+            "demo": false,
+            "format": "video-ac"
+        });
+        window['nitroAds'].createAd('top-large-leaderboard-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "970",
+                    "90"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 1000px) and (max-width: 99999px)"
+        });
+        window['nitroAds'].createAd('bottom-large-billboard-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "970",
+                    "250"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 1000px) and (max-width: 99999px)"
+        });
+        window['nitroAds'].createAd('top-leaderboard-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "728",
+                    "90"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 768px) and (max-width: 999px)"
+        });
+        window['nitroAds'].createAd('bottom-leaderboard-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "728",
+                    "90"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 768px) and (max-width: 999px)"
+        });
+        window['nitroAds'].createAd('top-mobile-banner-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "320",
+                    "50"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 320px) and (max-width: 767px)"
+        });
+        window['nitroAds'].createAd('bottom-mobile-banner-poster', {
+            "demo": false,
+            "refreshLimit": 10,
+            "refreshTime": 30,
+            "renderVisibleOnly": true,
+            "refreshVisibleOnly": true,
+            "sizes": [
+                [
+                    "320",
+                    "50"
+                ]
+            ],
+            "report": {
+                "enabled": true,
+                "wording": "Report Ad",
+                "position": "bottom-right"
+            },
+            "mediaQuery": "(min-width: 320px) and (max-width: 767px)"
+        });
+    </script>
+
+    <script>
+        var characters       = [{"id":184132,"member_id":114095,"guild_id":3439,"name":"\u0410\u0432\u0438\u0448\u0430\u043d\u043d","slug":"avisann","level":70,"race":"Troll","class":"Priest","archetype":"Heal","spec":"Holy (Priest)","spec_label":"\u0426\u043e\u0445","profession_1":null,"profession_2":null,"rank":null,"rank_goal":null,"raid_group_id":null,"is_alt":1,"public_note":null,"inactive_at":null,"username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","member_slug":"adskiismexroman","discord_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)#6423","discord_id":"528502315854856194","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":null,"raid_group_color":null,"officer_note":null,"raid_count":0,"benched_count":0,"attendance_percentage":0,"display_archetype":"Healer","display_class":"Priest","display_profession1":null,"display_profession2":null,"display_race":"Troll","display_spec":"\u0426\u043e\u0445","sub_archetype":null,"received":[],"secondary_raid_groups":[],"all_wishlists":[]},{"id":165676,"member_id":136237,"guild_id":3439,"name":"\u0410\u0433\u0430\u043d\u0443","slug":"aganu","level":70,"race":"Orc","class":"Hunter","archetype":"DPS","spec":"Beast","spec_label":null,"profession_1":"Engineering","profession_2":"Alchemy","rank":null,"rank_goal":null,"raid_group_id":3461,"is_alt":0,"public_note":null,"inactive_at":null,"username":"\u0410\u0433\u0430\u043d\u0443","member_slug":"aganu","discord_username":"\u0410\u0433\u0430\u043d\u0443#6610","discord_id":"714463774786060418","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":"25.1","raid_group_color":"15105570","officer_note":null,"raid_count":6,"benched_count":0,"attendance_percentage":1,"display_archetype":"DPS","display_class":"Hunter","display_profession1":"Engineering","display_profession2":"Alchemy","display_race":"Orc","display_spec":"Beast","sub_archetype":"Physical","received":[{"id":34653,"item_id":31091,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Chestguard of the Forgotten Protector","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"BT 1 sostav","raid_slug":"bt-1-sostav","instance_id":15,"guild_tier":null,"pivot":{"character_id":165676,"item_id":31091,"id":4936935,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":33037,"received_at":"2022-02-04 14:13:46","created_at":"2022-02-04T14:13:46.000000Z","updated_at":null}},{"id":34661,"item_id":31099,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Leggings of the Forgotten Vanquisher","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":15,"guild_tier":null,"pivot":{"character_id":165676,"item_id":31099,"id":4722300,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":33709,"item_id":29995,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Leggings of Murderous Intent","weight":0.5,"quality":4,"inventory_type":7,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1sostav","raid_slug":"ssctk-1sostav","instance_id":14,"guild_tier":1,"pivot":{"character_id":165676,"item_id":29995,"id":4396597,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":30190,"received_at":"2022-01-21 15:39:50","created_at":"2022-01-21T15:39:50.000000Z","updated_at":null}},{"id":33708,"item_id":29994,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Thalassian Wildercloak","weight":0.5,"quality":4,"inventory_type":16,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK+SSC 1sostav","raid_slug":"tkssc-1sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":165676,"item_id":29994,"id":4139556,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":29327,"received_at":"2022-01-14 15:39:31","created_at":"2022-01-14T15:39:31.000000Z","updated_at":null}},{"id":33932,"item_id":30238,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Chestguard of the Vanquished Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK+SSC 1sostav","raid_slug":"tkssc-1sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":165676,"item_id":30238,"id":4139561,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":29327,"received_at":"2022-01-14 15:39:31","created_at":"2022-01-14T15:39:31.000000Z","updated_at":null}},{"id":33944,"item_id":30250,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pauldrons of the Vanquished Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK + SSC 1 sostav","raid_slug":"tk-ssc-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":165676,"item_id":30250,"id":3902076,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":28283,"received_at":"2022-01-05 15:16:39","created_at":"2022-01-05T15:16:39.000000Z","updated_at":null}},{"id":35744,"item_id":32385,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Magtheridon's Head","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssctk-1-sostav","instance_id":11,"guild_tier":null,"pivot":{"character_id":165676,"item_id":32385,"id":3705083,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":27338,"received_at":"2021-12-24 15:15:37","created_at":"2021-12-24T15:15:37.000000Z","updated_at":null}},{"id":33938,"item_id":30244,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Helm of the Vanquished Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssctk-1-sostav","instance_id":12,"guild_tier":2,"pivot":{"character_id":165676,"item_id":30244,"id":3705081,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":27338,"received_at":"2021-12-24 15:15:37","created_at":"2021-12-24T15:15:37.000000Z","updated_at":null}},{"id":33699,"item_id":29985,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Void Reaver Greaves","weight":0.5,"quality":4,"inventory_type":7,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":3,"pivot":{"character_id":165676,"item_id":29985,"id":3554155,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":26314,"received_at":"2021-12-15 15:19:47","created_at":"2021-12-15T15:19:47.000000Z","updated_at":null}}],"secondary_raid_groups":[],"all_wishlists":[{"id":36164,"item_id":32944,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Talon of the Phoenix","weight":0.5,"quality":4,"inventory_type":21,"item_source_id":116,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0433\u0430\u043d\u0443","guild_tier":2,"list_number":1,"pivot":{"character_id":165676,"item_id":32944,"id":3492514,"added_by":136237,"type":"wishlist","order":2,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-12-11T04:32:39.000000Z","updated_at":"2021-12-11T04:32:39.000000Z"}},{"id":33817,"item_id":30104,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Cobra-Lash Boots","weight":0.5,"quality":4,"inventory_type":8,"item_source_id":106,"instance_id":12,"instance_name":"Serpentshrine Cavern","instance_order":12,"added_by_username":"\u0410\u0433\u0430\u043d\u0443","guild_tier":2,"list_number":1,"pivot":{"character_id":165676,"item_id":30104,"id":3492515,"added_by":136237,"type":"wishlist","order":3,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-12-11T04:32:39.000000Z","updated_at":"2021-12-11T04:32:39.000000Z"}},{"id":33711,"item_id":29997,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Band of the Ranger-General","weight":0.5,"quality":4,"inventory_type":11,"item_source_id":119,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0433\u0430\u043d\u0443","guild_tier":2,"list_number":1,"pivot":{"character_id":165676,"item_id":29997,"id":3492517,"added_by":136237,"type":"wishlist","order":5,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-12-11T04:32:39.000000Z","updated_at":"2021-12-11T04:32:39.000000Z"}},{"id":33731,"item_id":30017,"parent_id":35764,"parent_item_id":32405,"expansion_id":2,"name":"Telonicus's Pendant of Mayhem","weight":0.5,"quality":4,"inventory_type":2,"item_source_id":null,"instance_id":null,"instance_name":null,"instance_order":null,"added_by_username":"\u0410\u0433\u0430\u043d\u0443","guild_tier":null,"list_number":1,"pivot":{"character_id":165676,"item_id":30017,"id":3492518,"added_by":136237,"type":"wishlist","order":6,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-12-11T04:32:39.000000Z","updated_at":"2021-12-11T04:32:39.000000Z"}}]},{"id":134007,"member_id":114095,"guild_id":3439,"name":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445","slug":"adskiismex","level":70,"race":"Orc","class":"Shaman","archetype":"Heal","spec":"Resto (Shammy)","spec_label":null,"profession_1":"Leatherworking","profession_2":"Enchanting","rank":null,"rank_goal":null,"raid_group_id":3461,"is_alt":0,"public_note":null,"inactive_at":null,"username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","member_slug":"adskiismexroman","discord_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)#6423","discord_id":"528502315854856194","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":"25.1","raid_group_color":"15105570","officer_note":null,"raid_count":6,"benched_count":0,"attendance_percentage":1,"display_archetype":"Healer","display_class":"Shaman","display_profession1":"Leatherworking","display_profession2":"Enchanting","display_race":"Orc","display_spec":"Restoration","sub_archetype":null,"received":[{"id":36031,"item_id":32750,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pattern: Living Earth Bindings","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":15,"guild_tier":null,"pivot":{"character_id":134007,"item_id":32750,"id":4722301,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":34456,"item_id":30882,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Bastion of Light","weight":0.5,"quality":4,"inventory_type":14,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":13,"guild_tier":null,"pivot":{"character_id":134007,"item_id":30882,"id":4722280,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":34456,"item_id":30882,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Bastion of Light","weight":0.5,"quality":4,"inventory_type":14,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":13,"guild_tier":null,"pivot":{"character_id":134007,"item_id":30882,"id":4722272,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":35764,"item_id":32405,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Verdant Sphere","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SS\u0421+TK 1sostav","raid_slug":"ssstk-1sostav","instance_id":14,"guild_tier":1,"pivot":{"character_id":134007,"item_id":32405,"id":4603064,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":30714,"received_at":"2022-01-26 15:21:37","created_at":"2022-01-26T15:21:37.000000Z","updated_at":null}},{"id":33936,"item_id":30242,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Helm of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1sostav","raid_slug":"ssctk-1sostav","instance_id":12,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30242,"id":4396579,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":30190,"received_at":"2022-01-21 15:39:50","created_at":"2022-01-21T15:39:50.000000Z","updated_at":null}},{"id":33933,"item_id":30239,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gloves of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK + SSC 1 sostav","raid_slug":"tk-ssc-1-sostav","instance_id":12,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30239,"id":3902063,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":28283,"received_at":"2022-01-05 15:16:39","created_at":"2022-01-05T15:16:39.000000Z","updated_at":null}},{"id":33701,"item_id":29987,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gauntlets of the Sun King","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK + SSC 1 sostav","raid_slug":"tk-ssc-1-sostav","instance_id":14,"guild_tier":1,"pivot":{"character_id":134007,"item_id":29987,"id":3902073,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":28283,"received_at":"2022-01-05 15:16:39","created_at":"2022-01-05T15:16:39.000000Z","updated_at":null}},{"id":33930,"item_id":30236,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Chestguard of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssctk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30236,"id":3705075,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":27338,"received_at":"2021-12-24 15:15:37","created_at":"2021-12-24T15:15:37.000000Z","updated_at":null}},{"id":33768,"item_id":30054,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ranger-General's Chestguard","weight":0.5,"quality":4,"inventory_type":5,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssctk-1-sostav","instance_id":12,"guild_tier":3,"pivot":{"character_id":134007,"item_id":30054,"id":3705062,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":27338,"received_at":"2021-12-24 15:15:37","created_at":"2021-12-24T15:15:37.000000Z","updated_at":null}},{"id":33942,"item_id":30248,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pauldrons of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30248,"id":3554153,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":26314,"received_at":"2021-12-15 15:19:47","created_at":"2021-12-15T15:19:47.000000Z","updated_at":null}},{"id":33744,"item_id":30030,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Girdle of Fallen Stars","weight":0.5,"quality":4,"inventory_type":6,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30030,"id":3554151,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":26314,"received_at":"2021-12-15 15:19:47","created_at":"2021-12-15T15:19:47.000000Z","updated_at":null}},{"id":32793,"item_id":28789,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Eye of Magtheridon","weight":0.5,"quality":4,"inventory_type":12,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":11,"guild_tier":null,"pivot":{"character_id":134007,"item_id":28789,"id":3485866,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":25795,"received_at":"2021-12-10 16:11:49","created_at":"2021-12-10T16:11:49.000000Z","updated_at":null}},{"id":33792,"item_id":30079,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Illidari Shoulderpads","weight":0.5,"quality":4,"inventory_type":3,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"\u0421\u0421\u041a 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssk-1-sostav","instance_id":12,"guild_tier":3,"pivot":{"character_id":134007,"item_id":30079,"id":3411224,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":24949,"received_at":"2021-12-03 14:03:23","created_at":"2021-12-03T14:03:23.000000Z","updated_at":null}},{"id":33770,"item_id":30056,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Robe of Hateful Echoes","weight":0.5,"quality":4,"inventory_type":20,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"\u0421\u0421\u041a 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssk-1-sostav","instance_id":12,"guild_tier":4,"pivot":{"character_id":134007,"item_id":30056,"id":3411219,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":24949,"received_at":"2021-12-03 14:03:23","created_at":"2021-12-03T14:03:23.000000Z","updated_at":null}},{"id":33705,"item_id":29991,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Sunhawk Leggings","weight":0.5,"quality":4,"inventory_type":7,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u0422\u041a \u041b\u0430\u0433\u0443\u044e\u0449\u0438\u0439 \u0441\u043f\u0438\u0434\u0440\u0430\u043d","raid_slug":"tk-laguyushhii-spidran","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":29991,"id":3384635,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":24542,"received_at":"2021-12-01 14:03:36","created_at":"2021-12-01T14:03:36.000000Z","updated_at":null}},{"id":33933,"item_id":30239,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gloves of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC +T4 \u041f\u0435\u0440\u0432\u044b\u0439","raid_slug":"ssc-t4-pervyi","instance_id":12,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30239,"id":3341933,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":23349,"received_at":"2021-11-26 14:43:52","created_at":"2021-11-26T14:43:52.000000Z","updated_at":null}},{"id":32617,"item_id":28603,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Talisman of Nightbane","weight":0.5,"quality":4,"inventory_type":23,"added_by_username":"Prion","raid_group_name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","raid_name":"\u041a\u0430\u0440\u0430 \u0410\u043a\u043a\u0430\u0440\u0430\u0442 \u0441\u043f\u043b\u0438\u0442","raid_slug":"kara-akkarat-split","instance_id":9,"guild_tier":null,"pivot":{"character_id":134007,"item_id":28603,"id":3130442,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":4160,"raid_id":19963,"received_at":"2021-11-05 14:09:43","created_at":"2021-11-05T14:09:43.000000Z","updated_at":null}},{"id":32523,"item_id":28507,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Handwraps of Flowing Thought","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Prion","raid_group_name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","raid_name":"\u0410\u043a\u043a\u0430\u0440\u0430\u0442 \u041a\u0430\u0440\u0430\u0436\u0430\u043d","raid_slug":"akkarat-karazan","instance_id":9,"guild_tier":null,"pivot":{"character_id":134007,"item_id":28507,"id":3035324,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":4160,"raid_id":18826,"received_at":"2021-10-28 14:15:31","created_at":"2021-10-28T14:15:31.000000Z","updated_at":null}},{"id":33635,"item_id":29921,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Fire Crest Breastplate","weight":0.5,"quality":4,"inventory_type":5,"added_by_username":"\u041e\u0434\u043e\u0440\u0438 ????","raid_group_name":"25.1","raid_name":"\u0422\u041a \u043f\u0435\u0440\u0432\u044b\u0439 \u0441\u043e\u0441\u0442\u0430\u0432 + \u04424 22.10","raid_slug":"tk-pervyi-sostav-t4-2210","instance_id":14,"guild_tier":3,"pivot":{"character_id":134007,"item_id":29921,"id":2971866,"added_by":114050,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":19110,"received_at":"2021-10-23 17:07:39","created_at":"2021-10-23T17:07:39.000000Z","updated_at":null}},{"id":32780,"item_id":28776,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Liar's Tongue Gloves","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"\u041e\u0434\u043e\u0440\u0438 ????","raid_group_name":"25.1","raid_name":"\u0422\u041a \u043f\u0435\u0440\u0432\u044b\u0439 \u0441\u043e\u0441\u0442\u0430\u0432 + \u04424 22.10","raid_slug":"tk-pervyi-sostav-t4-2210","instance_id":11,"guild_tier":null,"pivot":{"character_id":134007,"item_id":28776,"id":2971860,"added_by":114050,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":19110,"received_at":"2021-10-23 17:07:39","created_at":"2021-10-23T17:07:39.000000Z","updated_at":null}},{"id":34268,"item_id":30667,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ring of Unrelenting Storms","weight":0.5,"quality":4,"inventory_type":11,"added_by_username":"Prion","raid_group_name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","raid_name":"\u0410\u043a\u043a\u0430\u0440\u0430\u0442 \u041a\u0430\u0440\u0430\u0436\u0430\u043d","raid_slug":"akkarat-karazan","instance_id":9,"guild_tier":null,"pivot":{"character_id":134007,"item_id":30667,"id":2948208,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":4160,"raid_id":17808,"received_at":"2021-10-21 14:37:40","created_at":"2021-10-21T14:37:40.000000Z","updated_at":null}},{"id":32683,"item_id":28672,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Drape of the Dark Reavers","weight":0.5,"quality":4,"inventory_type":16,"added_by_username":"Prion","raid_group_name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","raid_name":"\u0410\u043a\u043a\u0430\u0440\u0430\u0442 \u041a\u0430\u0440\u0430\u0436\u0430\u043d","raid_slug":"akkarat-karazan","instance_id":9,"guild_tier":null,"pivot":{"character_id":134007,"item_id":28672,"id":2948207,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":4160,"raid_id":17808,"received_at":"2021-10-21 14:37:40","created_at":"2021-10-21T14:37:40.000000Z","updated_at":null}},{"id":32769,"item_id":28765,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Stainless Cloak of the Pure Hearted","weight":0.5,"quality":4,"inventory_type":16,"added_by_username":"Prion","raid_group_name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","raid_name":"\u0410\u043a\u043a\u0430\u0440\u0430\u0442 \u041a\u0430\u0440\u0430\u0436\u0430\u043d","raid_slug":"akkarat-karazan","instance_id":9,"guild_tier":1,"pivot":{"character_id":134007,"item_id":28765,"id":2948213,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4160,"raid_id":17808,"received_at":"2021-10-21 14:37:40","created_at":"2021-10-21T14:37:40.000000Z","updated_at":null}},{"id":33690,"item_id":29976,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Worldstorm Gauntlets","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0412\u0442\u043e\u0440\u043e\u0439 \u0441\u043e\u0441\u0442\u0430\u0432 \u0422\u041a+\u0421\u0421\u041a","raid_slug":"vtoroi-sostav-tkssk","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":29976,"id":2881660,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":17917,"received_at":"2021-10-16 13:32:12","created_at":"2021-10-16T13:32:12.000000Z","updated_at":null}},{"id":33942,"item_id":30248,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pauldrons of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0421\u0421\u041a+\u0422\u041a \u041f\u0422 2 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssktk-pt-2-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":134007,"item_id":30248,"id":2786589,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":16582,"received_at":"2021-10-09 02:50:20","created_at":"2021-10-09T02:50:20.000000Z","updated_at":null}},{"id":33780,"item_id":30066,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Tempest-Strider Boots","weight":0.5,"quality":4,"inventory_type":8,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u041d\u0435\u0434\u0435\u043b\u044f 3, \u04225(\u0432\u0442\u043e\u0440\u043e\u0439 \u0441\u043e\u0441\u0442\u0430\u0432)","raid_slug":"nedelya-3-t5vtoroi-sostav","instance_id":12,"guild_tier":3,"pivot":{"character_id":134007,"item_id":30066,"id":2666417,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":15085,"received_at":"2021-09-30 04:33:12","created_at":"2021-09-30T04:33:12.000000Z","updated_at":null}}],"secondary_raid_groups":[],"all_wishlists":[{"id":33634,"item_id":29920,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Phoenix-Ring of Rebirth","weight":0.5,"quality":4,"inventory_type":11,"item_source_id":116,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":2,"list_number":1,"pivot":{"character_id":134007,"item_id":29920,"id":2693160,"added_by":114095,"type":"wishlist","order":2,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:28:32.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":33703,"item_id":29989,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Sunshower Light Cloak","weight":0.5,"quality":4,"inventory_type":16,"item_source_id":119,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":1,"list_number":1,"pivot":{"character_id":134007,"item_id":29989,"id":2693165,"added_by":114095,"type":"wishlist","order":3,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:28:32.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":35803,"item_id":32458,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ashes of Al'ar","weight":0.5,"quality":4,"inventory_type":0,"item_source_id":119,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":1,"list_number":1,"pivot":{"character_id":134007,"item_id":32458,"id":2693175,"added_by":114095,"type":"wishlist","order":4,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:34:42.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32774,"item_id":28770,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Nathrezim Mindblade","weight":0.5,"quality":4,"inventory_type":21,"item_source_id":95,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":null,"list_number":1,"pivot":{"character_id":134007,"item_id":28770,"id":3036001,"added_by":114095,"type":"wishlist","order":5,"list_number":1,"is_offspec":1,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32533,"item_id":28517,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Boots of Foretelling","weight":0.5,"quality":4,"inventory_type":8,"item_source_id":87,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":null,"list_number":1,"pivot":{"character_id":134007,"item_id":28517,"id":3035997,"added_by":114095,"type":"wishlist","order":6,"list_number":1,"is_offspec":1,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32784,"item_id":28780,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Soul-Eater's Handwraps","weight":0.5,"quality":4,"inventory_type":10,"item_source_id":98,"instance_id":11,"instance_name":"Magtheridon's Lair","instance_order":11,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":null,"list_number":1,"pivot":{"character_id":134007,"item_id":28780,"id":3036003,"added_by":114095,"type":"wishlist","order":7,"list_number":1,"is_offspec":1,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32757,"item_id":28753,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ring of Recurrence","weight":0.5,"quality":4,"inventory_type":11,"item_source_id":90,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":1,"list_number":1,"pivot":{"character_id":134007,"item_id":28753,"id":3036000,"added_by":114095,"type":"wishlist","order":8,"list_number":1,"is_offspec":1,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32745,"item_id":28741,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Skulker's Greaves","weight":0.5,"quality":4,"inventory_type":7,"item_source_id":93,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":null,"list_number":1,"pivot":{"character_id":134007,"item_id":28741,"id":3035999,"added_by":114095,"type":"wishlist","order":9,"list_number":1,"is_offspec":1,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":33761,"item_id":30047,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Blackfathom Warbands","weight":0.5,"quality":4,"inventory_type":9,"item_source_id":101,"instance_id":12,"instance_name":"Serpentshrine Cavern","instance_order":12,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":2,"list_number":1,"pivot":{"character_id":134007,"item_id":30047,"id":2693167,"added_by":114095,"type":"wishlist","order":10,"list_number":1,"is_offspec":0,"is_received":1,"received_at":"2021-11-15 09:04:40","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:28:32.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":33805,"item_id":30092,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Orca-Hide Boots","weight":0.5,"quality":4,"inventory_type":8,"item_source_id":103,"instance_id":12,"instance_name":"Serpentshrine Cavern","instance_order":12,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":2,"list_number":1,"pivot":{"character_id":134007,"item_id":30092,"id":2693168,"added_by":114095,"type":"wishlist","order":12,"list_number":1,"is_offspec":0,"is_received":1,"received_at":"2022-01-14 17:38:46","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:28:32.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":33821,"item_id":30108,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Lightfathom Scepter","weight":0.5,"quality":4,"inventory_type":21,"item_source_id":106,"instance_id":12,"instance_name":"Serpentshrine Cavern","instance_order":12,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":2,"list_number":1,"pivot":{"character_id":134007,"item_id":30108,"id":2693170,"added_by":114095,"type":"wishlist","order":13,"list_number":1,"is_offspec":0,"is_received":1,"received_at":"2021-10-08 19:43:17","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-02T06:28:32.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32789,"item_id":28785,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"The Lightning Capacitor","weight":0.5,"quality":4,"inventory_type":12,"item_source_id":91,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":1,"list_number":1,"pivot":{"character_id":134007,"item_id":28785,"id":3035998,"added_by":114095,"type":"wishlist","order":14,"list_number":1,"is_offspec":1,"is_received":1,"received_at":"2022-01-14 17:38:46","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":32766,"item_id":28762,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Adornment of Stolen Souls","weight":0.5,"quality":4,"inventory_type":2,"item_source_id":95,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":null,"list_number":1,"pivot":{"character_id":134007,"item_id":28762,"id":3036002,"added_by":114095,"type":"wishlist","order":15,"list_number":1,"is_offspec":1,"is_received":1,"received_at":"2022-01-14 17:38:46","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-28T15:48:26.000000Z","updated_at":"2022-01-14T17:44:22.000000Z"}},{"id":33705,"item_id":29991,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Sunhawk Leggings","weight":0.5,"quality":4,"inventory_type":7,"item_source_id":119,"instance_id":14,"instance_name":"Tempest Keep","instance_order":13,"added_by_username":"\u0410\u0434\u0441\u043a\u0438\u0439\u0441\u043c\u0435\u0445(\u0420\u043e\u043c\u0430\u043d)","guild_tier":2,"list_number":1,"pivot":{"character_id":134007,"item_id":29991,"id":3386018,"added_by":114095,"type":"wishlist","order":16,"list_number":1,"is_offspec":0,"is_received":1,"received_at":"2021-12-01 16:51:34","note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-12-01T16:51:34.000000Z","updated_at":"2022-01-14T17:38:46.000000Z"}}]},{"id":53678,"member_id":114433,"guild_id":3439,"name":"\u0410\u0435\u0448\u043a\u0430","slug":"aeska","level":70,"race":null,"class":"Warlock","archetype":"DPS","spec":"Destruction","spec_label":"Destruction","profession_1":null,"profession_2":null,"rank":null,"rank_goal":null,"raid_group_id":3464,"is_alt":0,"public_note":null,"inactive_at":null,"username":"aeIIIe4ka ( \u0410\u043b\u0435\u043a\u0441\u0435\u0439 )","member_slug":"aeiiie4ka-aleksei","discord_username":"aeIIIe4ka ( \u0410\u043b\u0435\u043a\u0441\u0435\u0439 )#0881","discord_id":"320005968178184193","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":"25.2","raid_group_color":"3407616","officer_note":null,"raid_count":2,"benched_count":0,"attendance_percentage":1,"display_archetype":"DPS","display_class":"Warlock","display_profession1":null,"display_profession2":null,"display_race":null,"display_spec":"Destruction","sub_archetype":"Caster","received":[{"id":35694,"item_id":32331,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Cloak of the Illidari Council","weight":0.5,"quality":4,"inventory_type":16,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u04226","raid_slug":"t6","instance_id":15,"guild_tier":null,"pivot":{"character_id":53678,"item_id":32331,"id":4847448,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":32117,"received_at":"2022-02-01 13:29:55","created_at":"2022-02-01T13:29:55.000000Z","updated_at":null}},{"id":35822,"item_id":32483,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"The Skull of Gul'dan","weight":0.5,"quality":4,"inventory_type":12,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u04226","raid_slug":"t6","instance_id":15,"guild_tier":null,"pivot":{"character_id":53678,"item_id":32483,"id":4847450,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":32117,"received_at":"2022-02-01 13:29:55","created_at":"2022-02-01T13:29:55.000000Z","updated_at":null}},{"id":33941,"item_id":30247,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Leggings of the Vanquished Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0422\u041a + \u0421\u0421\u041a \u0432\u0442\u043e\u0440\u043e\u0439","raid_slug":"tk-ssk-vtoroi","instance_id":12,"guild_tier":2,"pivot":{"character_id":53678,"item_id":30247,"id":3703251,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":27332,"received_at":"2021-12-24 07:17:46","created_at":"2021-12-24T07:17:46.000000Z","updated_at":null}},{"id":34108,"item_id":30449,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Void Star Talisman","weight":0.5,"quality":4,"inventory_type":12,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0422\u041a + \u0421\u0421\u041a \u0432\u0442\u043e\u0440\u043e\u0439","raid_slug":"tk-ssk-vtoroi","instance_id":14,"guild_tier":4,"pivot":{"character_id":53678,"item_id":30449,"id":3703237,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":27332,"received_at":"2021-12-24 07:17:46","created_at":"2021-12-24T07:17:46.000000Z","updated_at":null}},{"id":33738,"item_id":30024,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Mantle of the Elven Kings","weight":0.5,"quality":4,"inventory_type":3,"added_by_username":"Rolen","raid_group_name":"25.2","raid_name":"2 \u0441\u043e\u0441\u0442\u0430\u0432 \u04424+\u0442\u043a 08.12","raid_slug":"2-sostav-t4tk-0812","instance_id":14,"guild_tier":3,"pivot":{"character_id":53678,"item_id":30024,"id":3457918,"added_by":52270,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":25483,"received_at":"2021-12-08 16:52:15","created_at":"2021-12-08T16:52:15.000000Z","updated_at":null}},{"id":33815,"item_id":30102,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Krakken-Heart Breastplate","weight":0.5,"quality":4,"inventory_type":5,"added_by_username":"Prion","raid_group_name":"25.2","raid_name":"SS\u0421 2 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"sss-2-sostav","instance_id":12,"guild_tier":4,"pivot":{"character_id":53678,"item_id":30102,"id":3431872,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3464,"raid_id":25230,"received_at":"2021-12-06 11:41:33","created_at":"2021-12-06T11:41:33.000000Z","updated_at":null}},{"id":35764,"item_id":32405,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Verdant Sphere","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"TK + T4","raid_slug":"tk-t4","instance_id":14,"guild_tier":1,"pivot":{"character_id":53678,"item_id":32405,"id":2668614,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":15100,"received_at":"2021-09-30 08:21:45","created_at":"2021-09-30T08:21:45.000000Z","updated_at":null}},{"id":33822,"item_id":30109,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ring of Endless Coils","weight":0.5,"quality":4,"inventory_type":11,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u0414\u043e\u0431\u0438\u0432\u043a\u0430 SSC TK","raid_slug":"dobivka-ssc-tk","instance_id":12,"guild_tier":2,"pivot":{"character_id":53678,"item_id":30109,"id":2463478,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":12701,"received_at":"2021-09-19 12:19:58","created_at":"2021-09-19T12:19:58.000000Z","updated_at":null}},{"id":32805,"item_id":28802,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Bloodmaw Magus-Blade","weight":0.5,"quality":4,"inventory_type":21,"added_by_username":"\u0412\u0435\u0440\u0445\u043e\u0432\u043d\u044b\u0439 \u041b\u043e\u0440\u0434 \u0414\u0438\u0440\u0445\u0430\u044d\u043b\u044c????","raid_group_name":"25.1","raid_name":"\u041c\u0430\u0433\u0442\u0435\u0440\u0438\u0434\u043e\u043d \u0438 \u0413\u0440\u0443\u0443\u043b","raid_slug":"magteridon-i-gruul","instance_id":10,"guild_tier":null,"pivot":{"character_id":53678,"item_id":28802,"id":1659723,"added_by":48282,"type":"received","order":0,"note":"\u0431\u0438\u0441","officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":9561,"received_at":"2021-08-25 13:51:48","created_at":"2021-08-25T13:51:48.000000Z","updated_at":null}},{"id":37207,"item_id":34845,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pit Lord's Satchel","weight":0.5,"quality":4,"inventory_type":18,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u041c\u0430\u0433\u0442\u0435\u0440\u0438\u0434\u043e\u043d, \u0413\u0440\u0443\u0443\u043b \u0441\u043f\u043b\u0438\u0442\u044b 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"magteridon-gruul-splity-1-sostav","instance_id":11,"guild_tier":null,"pivot":{"character_id":53678,"item_id":34845,"id":1460888,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":7990,"received_at":"2021-08-11 13:00:24","created_at":"2021-08-11T13:00:24.000000Z","updated_at":null}},{"id":32523,"item_id":28507,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Handwraps of Flowing Thought","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430 \u0445\u043b\u0435\u0431","raid_slug":"kara-xleb","instance_id":9,"guild_tier":null,"pivot":{"character_id":53678,"item_id":28507,"id":1327047,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":6830,"received_at":"2021-08-01 17:07:44","created_at":"2021-08-01T17:07:44.000000Z","updated_at":null}},{"id":32742,"item_id":28734,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Jewel of Infinite Possibilities","weight":0.5,"quality":4,"inventory_type":23,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430 \u0445\u043b\u0435\u0431","raid_slug":"kara-xleb","instance_id":9,"guild_tier":null,"pivot":{"character_id":53678,"item_id":28734,"id":1327045,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":6830,"received_at":"2021-08-01 17:07:44","created_at":"2021-08-01T17:07:44.000000Z","updated_at":null}},{"id":33556,"item_id":29755,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Chestguard of the Fallen Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u041c\u0430\u0433\u0442\u0435\u0440\u0438\u0434\u043e\u043d","raid_slug":"magteridon","instance_id":11,"guild_tier":null,"pivot":{"character_id":53678,"item_id":29755,"id":1246136,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":5975,"received_at":"2021-07-25 12:59:30","created_at":"2021-07-25T12:59:30.000000Z","updated_at":null}},{"id":37208,"item_id":34846,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Black Sack of Gems","weight":null,"quality":2,"inventory_type":0,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u041c\u0430\u0433\u0442\u0435\u0440\u0438\u0434\u043e\u043d","raid_slug":"magteridon","instance_id":null,"guild_tier":null,"pivot":{"character_id":53678,"item_id":34846,"id":1246139,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":5975,"received_at":"2021-07-25 12:59:30","created_at":"2021-07-25T12:59:30.000000Z","updated_at":null}},{"id":32533,"item_id":28517,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Boots of Foretelling","weight":0.5,"quality":4,"inventory_type":8,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431","raid_slug":"karazan-kiberxleb","instance_id":9,"guild_tier":null,"pivot":{"character_id":53678,"item_id":28517,"id":1175849,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":5264,"received_at":"2021-07-19 12:29:18","created_at":"2021-07-19T12:29:18.000000Z","updated_at":null}},{"id":32748,"item_id":28744,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Uni-Mind Headdress","weight":0.5,"quality":4,"inventory_type":1,"added_by_username":"Gordory","raid_group_name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","raid_name":null,"raid_slug":null,"instance_id":9,"guild_tier":null,"pivot":{"character_id":53678,"item_id":28744,"id":767040,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3465,"raid_id":null,"received_at":"2021-06-23 16:08:23","created_at":"2021-06-23T16:08:23.000000Z","updated_at":null}}],"secondary_raid_groups":[],"all_wishlists":[]},{"id":55368,"member_id":69447,"guild_id":3439,"name":"\u0410\u043a\u043a\u0430\u0440\u0430\u0442","slug":"akkarat","level":70,"race":"Tauren","class":"Shaman","archetype":null,"spec":null,"spec_label":null,"profession_1":null,"profession_2":null,"rank":null,"rank_goal":null,"raid_group_id":3461,"is_alt":0,"public_note":null,"inactive_at":null,"username":"deaden","member_slug":"deaden","discord_username":"deaden#4196","discord_id":"221528003023339531","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":"25.1","raid_group_color":"15105570","officer_note":null,"raid_count":5,"benched_count":2,"attendance_percentage":1,"display_archetype":null,"display_class":"Shaman","display_profession1":null,"display_profession2":null,"display_race":"Tauren","display_spec":null,"sub_archetype":null,"received":[{"id":34461,"item_id":30887,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Golden Links of Restoration","weight":0.5,"quality":4,"inventory_type":5,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":13,"guild_tier":null,"pivot":{"character_id":55368,"item_id":30887,"id":4722276,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":35640,"item_id":32276,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Flashfire Girdle","weight":0.5,"quality":4,"inventory_type":6,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"Hyjal+BT 1 sostav (1kd)","raid_slug":"hyjalbt-1-sostav-1kd","instance_id":15,"guild_tier":null,"pivot":{"character_id":55368,"item_id":32276,"id":4722287,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":31176,"received_at":"2022-01-28 18:51:33","created_at":"2022-01-28T18:51:33.000000Z","updated_at":null}},{"id":33942,"item_id":30248,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pauldrons of the Vanquished Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC+TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssctk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":55368,"item_id":30248,"id":3705080,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":27338,"received_at":"2021-12-24 15:15:37","created_at":"2021-12-24T15:15:37.000000Z","updated_at":null}},{"id":35764,"item_id":32405,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Verdant Sphere","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":1,"pivot":{"character_id":55368,"item_id":32405,"id":3554158,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":26314,"received_at":"2021-12-15 15:19:47","created_at":"2021-12-15T15:19:47.000000Z","updated_at":null}},{"id":33761,"item_id":30047,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Blackfathom Warbands","weight":0.5,"quality":4,"inventory_type":9,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"ssc-1-sostav","instance_id":12,"guild_tier":2,"pivot":{"character_id":55368,"item_id":30047,"id":3485991,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":25796,"received_at":"2021-12-10 16:31:30","created_at":"2021-12-10T16:31:30.000000Z","updated_at":null}},{"id":33744,"item_id":30030,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Girdle of Fallen Stars","weight":0.5,"quality":4,"inventory_type":6,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":55368,"item_id":30030,"id":3485857,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":25795,"received_at":"2021-12-10 16:11:49","created_at":"2021-12-10T16:11:49.000000Z","updated_at":null}},{"id":33705,"item_id":29991,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Sunhawk Leggings","weight":0.5,"quality":4,"inventory_type":7,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"TK 1 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-1-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":55368,"item_id":29991,"id":3485861,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":25795,"received_at":"2021-12-10 16:11:49","created_at":"2021-12-10T16:11:49.000000Z","updated_at":null}},{"id":34233,"item_id":30626,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Sextant of Unstable Currents","weight":0.5,"quality":4,"inventory_type":12,"added_by_username":"Prion","raid_group_name":"25.1","raid_name":"SSC +T4 \u041f\u0435\u0440\u0432\u044b\u0439","raid_slug":"ssc-t4-pervyi","instance_id":12,"guild_tier":2,"pivot":{"character_id":55368,"item_id":30626,"id":3341927,"added_by":114119,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":23349,"received_at":"2021-11-26 14:43:52","created_at":"2021-11-26T14:43:52.000000Z","updated_at":null}},{"id":33810,"item_id":30097,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Coral-Barbed Shoulderpads","weight":0.5,"quality":4,"inventory_type":3,"added_by_username":"\u041e\u0434\u043e\u0440\u0438 ????","raid_group_name":"25.1","raid_name":"\u0421\u0421\u041a \u041f\u0435\u0440\u0432\u044b\u0439 \u0441\u043e\u0441\u0442\u0430\u0432 1","raid_slug":"ssk-pervyi-sostav-1","instance_id":12,"guild_tier":3,"pivot":{"character_id":55368,"item_id":30097,"id":2874738,"added_by":114050,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":17826,"received_at":"2021-10-15 16:16:02","created_at":"2021-10-15T16:16:02.000000Z","updated_at":null}},{"id":33704,"item_id":29990,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Crown of the Sun","weight":0.5,"quality":4,"inventory_type":1,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"TK + T4","raid_slug":"tk-t4","instance_id":14,"guild_tier":3,"pivot":{"character_id":55368,"item_id":29990,"id":2668616,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":15100,"received_at":"2021-09-30 08:21:45","created_at":"2021-09-30T08:21:45.000000Z","updated_at":null}},{"id":33564,"item_id":29763,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Pauldrons of the Fallen Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"TK + T4 \u0434\u043e\u0431\u0438\u0432\u043a\u0430","raid_slug":"tk-t4-dobivka","instance_id":10,"guild_tier":null,"pivot":{"character_id":55368,"item_id":29763,"id":2577161,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":14065,"received_at":"2021-09-24 13:48:47","created_at":"2021-09-24T13:48:47.000000Z","updated_at":null}},{"id":33555,"item_id":29754,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Chestguard of the Fallen Champion","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"TK + T4 \u0434\u043e\u0431\u0438\u0432\u043a\u0430","raid_slug":"tk-t4-dobivka","instance_id":11,"guild_tier":null,"pivot":{"character_id":55368,"item_id":29754,"id":2576989,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":3461,"raid_id":14065,"received_at":"2021-09-24 13:26:44","created_at":"2021-09-24T13:26:44.000000Z","updated_at":null}},{"id":32772,"item_id":28768,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Malchazeen","weight":0.5,"quality":4,"inventory_type":13,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431","raid_slug":"karazan-kiberxleb","instance_id":9,"guild_tier":null,"pivot":{"character_id":55368,"item_id":28768,"id":1175851,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":1,"raid_group_id":4008,"raid_id":5264,"received_at":"2021-07-19 12:29:18","created_at":"2021-07-19T12:29:18.000000Z","updated_at":null}},{"id":32523,"item_id":28507,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Handwraps of Flowing Thought","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u0425\u043b\u0435\u0431\u0443\u0448\u0435\u043a","raid_slug":"karazan-xlebusek","instance_id":9,"guild_tier":null,"pivot":{"character_id":55368,"item_id":28507,"id":1037919,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":3932,"received_at":"2021-07-08 17:38:41","created_at":"2021-07-08T17:38:41.000000Z","updated_at":null}},{"id":34275,"item_id":30677,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Lurker's Belt","weight":null,"quality":4,"inventory_type":6,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u0425\u043b\u0435\u0431\u0443\u0448\u0435\u043a","raid_slug":"karazan-xlebusek","instance_id":9,"guild_tier":null,"pivot":{"character_id":55368,"item_id":30677,"id":1037932,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":3932,"received_at":"2021-07-08 17:38:41","created_at":"2021-07-08T17:38:41.000000Z","updated_at":null}},{"id":32756,"item_id":28752,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Forestlord Striders","weight":0.5,"quality":4,"inventory_type":8,"added_by_username":"Ubitso","raid_group_name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u0425\u043b\u0435\u0431\u0443\u0448\u0435\u043a","raid_slug":"karazan-xlebusek","instance_id":9,"guild_tier":null,"pivot":{"character_id":55368,"item_id":28752,"id":1037931,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":4008,"raid_id":3932,"received_at":"2021-07-08 17:38:41","created_at":"2021-07-08T17:38:41.000000Z","updated_at":null}},{"id":32813,"item_id":28810,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Windshear Boots","weight":0.5,"quality":4,"inventory_type":8,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":"\u0413\u0440\u0443\u0443\u043b \u0438 \u041c\u0430\u0433\u0442\u0435\u0440\u0438\u0434\u043e\u043d","raid_slug":"gruul-i-magteridon","instance_id":10,"guild_tier":null,"pivot":{"character_id":55368,"item_id":28810,"id":942001,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":3157,"received_at":"2021-07-02 14:40:47","created_at":"2021-07-02T14:40:47.000000Z","updated_at":null}},{"id":32806,"item_id":28803,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Cowl of Nature's Breath","weight":0.5,"quality":4,"inventory_type":1,"added_by_username":"Gordory","raid_group_name":"25.1","raid_name":null,"raid_slug":null,"instance_id":10,"guild_tier":null,"pivot":{"character_id":55368,"item_id":28803,"id":666714,"added_by":42320,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3461,"raid_id":null,"received_at":"2021-06-18 14:15:41","created_at":"2021-06-18T14:15:41.000000Z","updated_at":null}}],"secondary_raid_groups":[],"all_wishlists":[{"id":32774,"item_id":28770,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Nathrezim Mindblade","weight":0.5,"quality":4,"inventory_type":21,"item_source_id":95,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"deaden","guild_tier":null,"list_number":1,"pivot":{"character_id":55368,"item_id":28770,"id":2681595,"added_by":69447,"type":"wishlist","order":1,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-10-01T02:06:54.000000Z","updated_at":"2021-10-01T02:06:54.000000Z"}}]},{"id":137417,"member_id":45508,"guild_id":3439,"name":"\u0410\u043b\u0435\u043a\u0441\u043e\u0441\u0430\u043d\u0434\u0440","slug":"aleksosandr","level":70,"race":"Orc","class":"Hunter","archetype":"DPS","spec":"Beast","spec_label":null,"profession_1":null,"profession_2":null,"rank":null,"rank_goal":null,"raid_group_id":3464,"is_alt":0,"public_note":null,"inactive_at":null,"username":"\u0411\u0430\u0444\u043d\u0438","member_slug":"bafni","discord_username":"\u0411\u0430\u0444\u043d\u0438#1295","discord_id":"230170194650202112","is_wishlist_unlocked":0,"is_received_unlocked":0,"raid_group_name":"25.2","raid_group_color":"3407616","officer_note":null,"raid_count":2,"benched_count":0,"attendance_percentage":1,"display_archetype":"DPS","display_class":"Hunter","display_profession1":null,"display_profession2":null,"display_race":"Orc","display_spec":"Beast","sub_archetype":"Physical","received":[{"id":34657,"item_id":31095,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Helm of the Forgotten Protector","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u04426 \u0432\u0442\u043e\u0440\u043e\u0439 \u0441\u0442\u0430\u0442\u0438\u043a","raid_slug":"t6-vtoroi-statik","instance_id":13,"guild_tier":null,"pivot":{"character_id":137417,"item_id":31095,"id":4938688,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":33051,"received_at":"2022-02-04 17:01:23","created_at":"2022-02-04T17:01:23.000000Z","updated_at":null}},{"id":34662,"item_id":31100,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Leggings of the Forgotten Protector","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u04426 \u0432\u0442\u043e\u0440\u043e\u0439 \u0441\u0442\u0430\u0442\u0438\u043a","raid_slug":"t6-vtoroi-statik","instance_id":15,"guild_tier":null,"pivot":{"character_id":137417,"item_id":31100,"id":4938683,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":33051,"received_at":"2022-02-04 17:01:23","created_at":"2022-02-04T17:01:23.000000Z","updated_at":null}},{"id":34656,"item_id":31094,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gloves of the Forgotten Protector","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u04226","raid_slug":"t6","instance_id":13,"guild_tier":null,"pivot":{"character_id":137417,"item_id":31094,"id":4847459,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":32117,"received_at":"2022-02-01 13:29:55","created_at":"2022-02-01T13:29:55.000000Z","updated_at":null}},{"id":33935,"item_id":30241,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gloves of the Vanquished Hero","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0422\u041a + \u0421\u0421\u041a \u0432\u0442\u043e\u0440\u043e\u0439","raid_slug":"tk-ssk-vtoroi","instance_id":12,"guild_tier":2,"pivot":{"character_id":137417,"item_id":30241,"id":3703249,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":27332,"received_at":"2021-12-24 07:17:46","created_at":"2021-12-24T07:17:46.000000Z","updated_at":null}},{"id":35764,"item_id":32405,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Verdant Sphere","weight":0.5,"quality":4,"inventory_type":0,"added_by_username":"Rolen","raid_group_name":"25.2","raid_name":"2 \u0441\u043e\u0441\u0442\u0430\u0432 \u04424+\u0442\u043a 08.12","raid_slug":"2-sostav-t4tk-0812","instance_id":14,"guild_tier":1,"pivot":{"character_id":137417,"item_id":32405,"id":3457920,"added_by":52270,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":25483,"received_at":"2021-12-08 16:52:15","created_at":"2021-12-08T16:52:15.000000Z","updated_at":null}},{"id":33711,"item_id":29997,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Band of the Ranger-General","weight":0.5,"quality":4,"inventory_type":11,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0422\u043a \u0432\u0442\u043e\u0440\u043e\u0439 \u0441\u043e\u0441\u0442\u0430\u0432","raid_slug":"tk-vtoroi-sostav","instance_id":14,"guild_tier":2,"pivot":{"character_id":137417,"item_id":29997,"id":3371243,"added_by":58268,"type":"received","order":0,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":24372,"received_at":"2021-11-30 14:30:43","created_at":"2021-11-30T14:30:43.000000Z","updated_at":null}},{"id":33818,"item_id":30105,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Serpent Spine Longbow","weight":0.5,"quality":4,"inventory_type":15,"added_by_username":"Ubitso","raid_group_name":"25.2","raid_name":"\u0412\u0442\u043e\u0440\u043e\u0439 \u0441\u043e\u0441\u0442\u0430\u0432 \u0421\u0421\u041a","raid_slug":"vtoroi-sostav-ssk","instance_id":12,"guild_tier":1,"pivot":{"character_id":137417,"item_id":30105,"id":3157113,"added_by":58268,"type":"received","order":1,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3464,"raid_id":21507,"received_at":"2021-11-08 18:17:04","created_at":"2021-11-08T18:17:04.000000Z","updated_at":"2021-11-18T10:03:35.000000Z"}},{"id":32522,"item_id":28506,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Gloves of Dexterous Manipulation","weight":0.5,"quality":4,"inventory_type":10,"added_by_username":"Gordory","raid_group_name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u0413\u043e\u0440\u0434\u043e\u0440\u0438","raid_slug":"karazan-gordori","instance_id":9,"guild_tier":null,"pivot":{"character_id":137417,"item_id":28506,"id":2766117,"added_by":42320,"type":"received","order":2,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3465,"raid_id":16336,"received_at":"2021-10-07 14:11:24","created_at":"2021-10-07T14:11:24.000000Z","updated_at":"2021-11-18T10:03:35.000000Z"}},{"id":32540,"item_id":28524,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Emerald Ripper","weight":0.5,"quality":4,"inventory_type":13,"added_by_username":"Gordory","raid_group_name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","raid_name":"\u041a\u0430\u0440\u0430\u0436\u0430\u043d \u0413\u043e\u0440\u0434\u043e\u0440\u0438","raid_slug":"karazan-gordori","instance_id":9,"guild_tier":null,"pivot":{"character_id":137417,"item_id":28524,"id":2766118,"added_by":42320,"type":"received","order":3,"note":null,"officer_note":null,"is_offspec":0,"raid_group_id":3465,"raid_id":16336,"received_at":"2021-10-07 14:11:24","created_at":"2021-10-07T14:11:24.000000Z","updated_at":"2021-11-18T10:03:35.000000Z"}}],"secondary_raid_groups":[{"id":3465,"name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","color":"1345570","pivot":{"character_id":137417,"raid_group_id":3465}}],"all_wishlists":[{"id":32761,"item_id":28757,"parent_id":null,"parent_item_id":null,"expansion_id":2,"name":"Ring of a Thousand Marks","weight":0.5,"quality":4,"inventory_type":11,"item_source_id":95,"instance_id":9,"instance_name":"Karazhan","instance_order":9,"added_by_username":"\u0411\u0430\u0444\u043d\u0438","guild_tier":null,"list_number":1,"pivot":{"character_id":137417,"item_id":28757,"id":3268490,"added_by":45508,"type":"wishlist","order":1,"list_number":1,"is_offspec":0,"is_received":0,"received_at":null,"note":null,"raid_group_id":null,"raid_id":null,"created_at":"2021-11-18T10:03:35.000000Z","updated_at":"2021-11-18T10:03:35.000000Z"}}]}];
+    
+    var currentWishlistNumber = 1;
+    
+    var guild            = {"id":3439,"name":"\u041a\u0440\u0430\u0439 \u0421\u0432\u0435\u0442\u0430","slug":"krai-sveta","expansion_id":2,"warcraftlogs_member_id":58268,"warcraftlogs_guild_id":478699,"auditor_role_id":868346796722782259,"message":null,"is_attendance_hidden":0,"attendance_decay_days":21,"is_prio_private":0,"is_prio_disabled":1,"is_received_locked":1,"is_wishlist_private":0,"is_wishlist_locked":0,"wishlist_locked_exceptions":null,"wishlist_names":null,"is_wishlist_disabled":0,"is_prio_autopurged":0,"is_wishlist_autopurged":1,"max_wishlist_items":null,"current_wishlist_number":1,"prio_show_count":null,"do_sort_items_by_instance":1,"is_raid_group_locked":1,"tier_mode":"s","disabled_at":null,"created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2021-10-27T07:50:27.000000Z","all_raid_groups":[{"id":3462,"name":"10.1 (\u0421\u0432\u044d\u0433\u0433\u0438)","slug":"101-sveggi","role_id":76097,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:02.000000Z","updated_at":"2021-10-08T08:24:50.000000Z","role":{"id":76097,"name":"\u041f\u0430\u043f\u0438\u043d\u0430 \u0434\u043e\u0447\u043a\u0430","discord_id":859051774581407744,"guild_id":3439,"slug":"papina-docka","description":"","color":"11803060","position":"24","discord_permissions":"37080640","created_at":"2021-06-30T18:45:43.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3463,"name":"10.2 (\u0421\u044b\u0440\u043d\u044b\u0439\u043a\u043e\u0440\u043e\u043b\u044c)","slug":"102-syrnyikorol","role_id":77745,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:22.000000Z","updated_at":"2021-10-04T17:12:46.000000Z","role":{"id":77745,"name":"10.2 \u0421\u044b\u0440\u043d\u044b\u0439\u043a\u043e\u0440\u043e\u043b\u044c","discord_id":861275468735971348,"guild_id":3439,"slug":"102-syrnyikorol","description":"","color":"11027200","position":"23","discord_permissions":"37080640","created_at":"2021-07-04T16:23:32.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3465,"name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","slug":"103-gordori","role_id":76098,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:33.000000Z","updated_at":"2021-07-02T06:54:02.000000Z","role":{"id":76098,"name":"10.3 \u0413\u043e\u0440\u0434\u043e\u0440\u0438","discord_id":859862914843934720,"guild_id":3439,"slug":"103-gordori","description":"","color":"1345570","position":"22","discord_permissions":"37080640","created_at":"2021-06-30T18:45:43.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3466,"name":"10.4 (\u0421\u0442\u0443\u043b\u043e\u043b\u0438\u0446\u044b\u0439)","slug":"104-stulolicyi","role_id":78915,"guild_id":3439,"disabled_at":"2021-10-04 17:17:22","created_at":"2021-06-14T14:53:03.000000Z","updated_at":"2021-10-04T17:17:22.000000Z","role":{"id":78915,"name":"10.4 \u0421\u0442\u0443\u043b\u043e\u043b\u0438\u0446\u044b\u0439","discord_id":861918015107760138,"guild_id":3439,"slug":"104-stulolicyi","description":"","color":"14719436","position":"21","discord_permissions":"37080640","created_at":"2021-07-07T14:26:17.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":4008,"name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","slug":"105-kiberxleb","role_id":77743,"guild_id":3439,"disabled_at":"2021-09-24 14:47:17","created_at":"2021-06-24T08:59:08.000000Z","updated_at":"2021-09-24T14:47:17.000000Z","role":{"id":77743,"name":"10.5 \u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431","discord_id":860004426592157696,"guild_id":3439,"slug":"105-kiberxleb","description":"","color":"16731094","position":"20","discord_permissions":"37080640","created_at":"2021-07-04T16:23:32.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":4160,"name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","slug":"106-akkarat","role_id":86678,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-27T14:11:41.000000Z","updated_at":"2021-09-24T14:21:12.000000Z","role":{"id":86678,"name":"10.6 \u0410\u043a\u043a\u0430\u0440\u0430\u0442","discord_id":869579841790427196,"guild_id":3439,"slug":"106-akkarat","description":"","color":"3447003","position":"19","discord_permissions":"0","created_at":"2021-07-30T15:59:08.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":5163,"name":"10.7 (\u0427\u0435\u0442\u0432\u0435\u0440\u0433)","slug":"107-cetverg","role_id":65481,"guild_id":3439,"disabled_at":"2021-09-24 14:07:24","created_at":"2021-07-27T08:30:34.000000Z","updated_at":"2021-09-24T14:07:24.000000Z","role":{"id":65481,"name":"\u041c\u0430\u0433","discord_id":605316126335041566,"guild_id":3439,"slug":"mag","description":null,"color":"6868207","position":"10","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2022-01-31T06:53:19.000000Z"}},{"id":5164,"name":"10.8 (\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u0435 \u0420\u0422)","slug":"108-moskovskoe-rt","role_id":65489,"guild_id":3439,"disabled_at":"2021-09-24 14:07:21","created_at":"2021-07-27T10:06:46.000000Z","updated_at":"2021-09-24T14:07:21.000000Z","role":{"id":65489,"name":"\u0428\u0430\u043c\u0430\u043d","discord_id":749317546913562698,"guild_id":3439,"slug":"saman","description":null,"color":"28894","position":"9","discord_permissions":"37211712","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2022-01-31T06:53:19.000000Z"}},{"id":3461,"name":"25.1","slug":"251","role_id":100444,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:48:38.000000Z","updated_at":"2021-09-30T08:43:31.000000Z","role":{"id":100444,"name":"25.1","discord_id":882189406541344768,"guild_id":3439,"slug":"251","description":"","color":"15105570","position":"26","discord_permissions":"0","created_at":"2021-08-31T09:27:08.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3464,"name":"25.2","slug":"252","role_id":90826,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:05.000000Z","updated_at":"2021-08-08T17:23:45.000000Z","role":{"id":90826,"name":"25.2","discord_id":873979314327150672,"guild_id":3439,"slug":"252","description":"","color":"3407616","position":"25","discord_permissions":"36767232","created_at":"2021-08-08T17:23:37.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3479,"name":"Common","slug":"common","role_id":65473,"guild_id":3439,"disabled_at":"2021-06-24 08:59:17","created_at":"2021-06-14T20:04:20.000000Z","updated_at":"2021-06-24T08:59:17.000000Z","role":{"id":65473,"name":"@everyone","discord_id":581031697781620737,"guild_id":3439,"slug":"at-everyone","description":null,"color":null,"position":"0","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2021-06-11T21:08:03.000000Z"}},{"id":3509,"name":"Roster","slug":"roster","role_id":65473,"guild_id":3439,"disabled_at":"2021-06-28 08:07:07","created_at":"2021-06-15T10:32:03.000000Z","updated_at":"2021-06-28T08:07:07.000000Z","role":{"id":65473,"name":"@everyone","discord_id":581031697781620737,"guild_id":3439,"slug":"at-everyone","description":null,"color":null,"position":"0","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2021-06-11T21:08:03.000000Z"}}],"raid_groups":[{"id":3462,"name":"10.1 (\u0421\u0432\u044d\u0433\u0433\u0438)","slug":"101-sveggi","role_id":76097,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:02.000000Z","updated_at":"2021-10-08T08:24:50.000000Z"},{"id":3463,"name":"10.2 (\u0421\u044b\u0440\u043d\u044b\u0439\u043a\u043e\u0440\u043e\u043b\u044c)","slug":"102-syrnyikorol","role_id":77745,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:22.000000Z","updated_at":"2021-10-04T17:12:46.000000Z"},{"id":3465,"name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","slug":"103-gordori","role_id":76098,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:33.000000Z","updated_at":"2021-07-02T06:54:02.000000Z"},{"id":4160,"name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","slug":"106-akkarat","role_id":86678,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-27T14:11:41.000000Z","updated_at":"2021-09-24T14:21:12.000000Z"},{"id":3461,"name":"25.1","slug":"251","role_id":100444,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:48:38.000000Z","updated_at":"2021-09-30T08:43:31.000000Z"},{"id":3464,"name":"25.2","slug":"252","role_id":90826,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:05.000000Z","updated_at":"2021-08-08T17:23:45.000000Z"}]};
+    var maxWishlistLists = 10;
+    var raidGroups       = [{"id":3462,"name":"10.1 (\u0421\u0432\u044d\u0433\u0433\u0438)","slug":"101-sveggi","role_id":76097,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:02.000000Z","updated_at":"2021-10-08T08:24:50.000000Z","role":{"id":76097,"name":"\u041f\u0430\u043f\u0438\u043d\u0430 \u0434\u043e\u0447\u043a\u0430","discord_id":859051774581407744,"guild_id":3439,"slug":"papina-docka","description":"","color":"11803060","position":"24","discord_permissions":"37080640","created_at":"2021-06-30T18:45:43.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3463,"name":"10.2 (\u0421\u044b\u0440\u043d\u044b\u0439\u043a\u043e\u0440\u043e\u043b\u044c)","slug":"102-syrnyikorol","role_id":77745,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:49:22.000000Z","updated_at":"2021-10-04T17:12:46.000000Z","role":{"id":77745,"name":"10.2 \u0421\u044b\u0440\u043d\u044b\u0439\u043a\u043e\u0440\u043e\u043b\u044c","discord_id":861275468735971348,"guild_id":3439,"slug":"102-syrnyikorol","description":"","color":"11027200","position":"23","discord_permissions":"37080640","created_at":"2021-07-04T16:23:32.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3465,"name":"10.3 (\u0413\u043e\u0440\u0434\u043e\u0440\u0438)","slug":"103-gordori","role_id":76098,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:33.000000Z","updated_at":"2021-07-02T06:54:02.000000Z","role":{"id":76098,"name":"10.3 \u0413\u043e\u0440\u0434\u043e\u0440\u0438","discord_id":859862914843934720,"guild_id":3439,"slug":"103-gordori","description":"","color":"1345570","position":"22","discord_permissions":"37080640","created_at":"2021-06-30T18:45:43.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3466,"name":"10.4 (\u0421\u0442\u0443\u043b\u043e\u043b\u0438\u0446\u044b\u0439)","slug":"104-stulolicyi","role_id":78915,"guild_id":3439,"disabled_at":"2021-10-04 17:17:22","created_at":"2021-06-14T14:53:03.000000Z","updated_at":"2021-10-04T17:17:22.000000Z","role":{"id":78915,"name":"10.4 \u0421\u0442\u0443\u043b\u043e\u043b\u0438\u0446\u044b\u0439","discord_id":861918015107760138,"guild_id":3439,"slug":"104-stulolicyi","description":"","color":"14719436","position":"21","discord_permissions":"37080640","created_at":"2021-07-07T14:26:17.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":4008,"name":"10.5 (\u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431)","slug":"105-kiberxleb","role_id":77743,"guild_id":3439,"disabled_at":"2021-09-24 14:47:17","created_at":"2021-06-24T08:59:08.000000Z","updated_at":"2021-09-24T14:47:17.000000Z","role":{"id":77743,"name":"10.5 \u041a\u0438\u0431\u0435\u0440\u0445\u043b\u0435\u0431","discord_id":860004426592157696,"guild_id":3439,"slug":"105-kiberxleb","description":"","color":"16731094","position":"20","discord_permissions":"37080640","created_at":"2021-07-04T16:23:32.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":4160,"name":"10.6 (\u0410\u043a\u043a\u0430\u0440\u0430\u0442)","slug":"106-akkarat","role_id":86678,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-27T14:11:41.000000Z","updated_at":"2021-09-24T14:21:12.000000Z","role":{"id":86678,"name":"10.6 \u0410\u043a\u043a\u0430\u0440\u0430\u0442","discord_id":869579841790427196,"guild_id":3439,"slug":"106-akkarat","description":"","color":"3447003","position":"19","discord_permissions":"0","created_at":"2021-07-30T15:59:08.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":5163,"name":"10.7 (\u0427\u0435\u0442\u0432\u0435\u0440\u0433)","slug":"107-cetverg","role_id":65481,"guild_id":3439,"disabled_at":"2021-09-24 14:07:24","created_at":"2021-07-27T08:30:34.000000Z","updated_at":"2021-09-24T14:07:24.000000Z","role":{"id":65481,"name":"\u041c\u0430\u0433","discord_id":605316126335041566,"guild_id":3439,"slug":"mag","description":null,"color":"6868207","position":"10","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2022-01-31T06:53:19.000000Z"}},{"id":5164,"name":"10.8 (\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u0435 \u0420\u0422)","slug":"108-moskovskoe-rt","role_id":65489,"guild_id":3439,"disabled_at":"2021-09-24 14:07:21","created_at":"2021-07-27T10:06:46.000000Z","updated_at":"2021-09-24T14:07:21.000000Z","role":{"id":65489,"name":"\u0428\u0430\u043c\u0430\u043d","discord_id":749317546913562698,"guild_id":3439,"slug":"saman","description":null,"color":"28894","position":"9","discord_permissions":"37211712","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2022-01-31T06:53:19.000000Z"}},{"id":3461,"name":"25.1","slug":"251","role_id":100444,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:48:38.000000Z","updated_at":"2021-09-30T08:43:31.000000Z","role":{"id":100444,"name":"25.1","discord_id":882189406541344768,"guild_id":3439,"slug":"251","description":"","color":"15105570","position":"26","discord_permissions":"0","created_at":"2021-08-31T09:27:08.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3464,"name":"25.2","slug":"252","role_id":90826,"guild_id":3439,"disabled_at":null,"created_at":"2021-06-14T14:50:05.000000Z","updated_at":"2021-08-08T17:23:45.000000Z","role":{"id":90826,"name":"25.2","discord_id":873979314327150672,"guild_id":3439,"slug":"252","description":"","color":"3407616","position":"25","discord_permissions":"36767232","created_at":"2021-08-08T17:23:37.000000Z","updated_at":"2022-01-31T08:53:21.000000Z"}},{"id":3479,"name":"Common","slug":"common","role_id":65473,"guild_id":3439,"disabled_at":"2021-06-24 08:59:17","created_at":"2021-06-14T20:04:20.000000Z","updated_at":"2021-06-24T08:59:17.000000Z","role":{"id":65473,"name":"@everyone","discord_id":581031697781620737,"guild_id":3439,"slug":"at-everyone","description":null,"color":null,"position":"0","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2021-06-11T21:08:03.000000Z"}},{"id":3509,"name":"Roster","slug":"roster","role_id":65473,"guild_id":3439,"disabled_at":"2021-06-28 08:07:07","created_at":"2021-06-15T10:32:03.000000Z","updated_at":"2021-06-28T08:07:07.000000Z","role":{"id":65473,"name":"@everyone","discord_id":581031697781620737,"guild_id":3439,"slug":"at-everyone","description":null,"color":null,"position":"0","discord_permissions":"37080640","created_at":"2021-06-11T21:08:03.000000Z","updated_at":"2021-06-11T21:08:03.000000Z"}}];
+    var showEdit         = true;
+    var showOfficerNote  = true;
+    var showPrios        = false;
+    var showWishlist     = true;
+    var wishlistNames    = null;
+</script>
+<script src="/js/processed/roster.js?id=f01483c712ec7a298ee7"></script>
+</body>
+</html>

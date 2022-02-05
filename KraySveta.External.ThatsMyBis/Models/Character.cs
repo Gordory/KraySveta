@@ -9,7 +9,7 @@ namespace KraySveta.External.ThatsMyBis.Models
         public int Id { get; init; }
 
         [JsonProperty("member_id")]
-        public int MemberId { get; init; }
+        public int? MemberId { get; init; }
 
         [JsonProperty("guild_id")]
         public int GuildId { get; init; }
@@ -50,7 +50,7 @@ namespace KraySveta.External.ThatsMyBis.Models
 
         // [JsonProperty("rank_goal")]
         // public string RankGoal { get; init; }
-        
+
         [JsonProperty("username")]
         public string Username { get; init; }
 

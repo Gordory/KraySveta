@@ -24,11 +24,16 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <None Remove="External.ThatsMyBis\Resources\test-raid.24133.html" />
-      <EmbeddedResource Include="External.ThatsMyBis\Resources\test-raid.24133.html">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </EmbeddedResource>
       <None Remove="External.ThatsMyBis\Resources\raid.16111.html" />
       <EmbeddedResource Include="External.ThatsMyBis\Resources\raid.16111.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="External.ThatsMyBis\Resources\test-roster.html" />
+      <EmbeddedResource Include="External.ThatsMyBis\Resources\roster.test.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="External.ThatsMyBis\Resources\roster.giant.05.02.2022.html" />
+      <EmbeddedResource Include="External.ThatsMyBis\Resources\roster.giant.05.02.2022.html">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
