@@ -76,8 +76,10 @@ namespace KraySveta.Api.Reports.Attendance
 
         private static IEnumerable<IGrouping<ulong, Character>> FilterRaidGroups(IEnumerable<Character> characters, int? raidGroupId)
         {
-            var membersLookup = characters.ToLookup(x => x.DiscordId);
-            
+            var membersLookup = characters
+                .Where(x => x.DiscordId.HasValue)
+                .ToLookup(x => x.DiscordId.Value);
+
             if (raidGroupId == null)
                 return membersLookup;
 

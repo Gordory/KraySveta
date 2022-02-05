@@ -52,17 +52,17 @@ namespace KraySveta.External.ThatsMyBis.Models
         // public string RankGoal { get; init; }
 
         [JsonProperty("username")]
-        public string Username { get; init; }
+        public string? Username { get; init; }
 
         [JsonProperty("discord_username")]
-        public string DiscordUsername { get; init; }
+        public string? DiscordUsername { get; init; }
         
         [JsonProperty("discord_id")]
-        public ulong DiscordId { get; set; }
+        public ulong? DiscordId { get; set; }
 
         [JsonProperty("raid_group_id")]
         public int? RaidGroupId { get; init; }
-        
+
         [JsonProperty("secondary_raid_groups")]
         public RaidGroup[] SecondaryRaidGroups { get; init; }
 
@@ -88,14 +88,14 @@ namespace KraySveta.External.ThatsMyBis.Models
         public double AttendancePercentage { get; init; }
 
         [JsonProperty("is_wishlist_unlocked")]
-        public bool IsWishlistUnlocked { get; init; }
-        
+        public bool? IsWishlistUnlocked { get; init; }
+
         [JsonProperty("is_received_unlocked")]
-        public bool IsReceivedUnlocked { get; init; }
+        public bool? IsReceivedUnlocked { get; init; }
 
         // [JsonProperty("raid_group_name")]
         // public string? RaidGroupName { get; init; }
-        
+
         // [JsonProperty("raid_group_color")]
         // public int? RaidGroupColor { get; init; }
 
