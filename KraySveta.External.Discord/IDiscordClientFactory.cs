@@ -12,9 +12,9 @@ namespace KraySveta.External.Discord
 
     public class DiscordClientFactory : IDiscordClientFactory
     {
-        private readonly IOptions<DiscordBotConfig> _configuration;
+        private readonly IOptions<DiscordBotConfiguration> _configuration;
 
-        public DiscordClientFactory(IOptions<DiscordBotConfig> configuration)
+        public DiscordClientFactory(IOptions<DiscordBotConfiguration> configuration)
         {
             _configuration = configuration;
         }

@@ -27,11 +27,11 @@ namespace KraySveta.External.ThatsMyBis
 
         private readonly CookieContainer _cookieContainer;
         private readonly HttpClient _httpClient;
-        private readonly IOptions<ThatsMyBisConfig> _configuration;
+        private readonly IOptions<ThatsMyBisConfiguration> _configuration;
         private readonly IRosterParser _rosterParser;
         private readonly IRaidParser _raidParser;
 
-        public ThatsMyBisClient(IOptions<ThatsMyBisConfig> configuration, IRosterParser rosterParser, IRaidParser raidParser)
+        public ThatsMyBisClient(IOptions<ThatsMyBisConfiguration> configuration, IRosterParser rosterParser, IRaidParser raidParser)
         {
             _configuration = configuration;
             _rosterParser = rosterParser;

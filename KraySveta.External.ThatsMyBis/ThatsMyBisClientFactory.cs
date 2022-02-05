@@ -10,11 +10,11 @@ namespace KraySveta.External.ThatsMyBis
 
     public class ThatsMyBisClientFactory : IThatsMyBisClientFactory
     {
-        private readonly IOptions<ThatsMyBisConfig> _configuration;
+        private readonly IOptions<ThatsMyBisConfiguration> _configuration;
         private readonly IRosterParser _rosterParser;
         private readonly IRaidParser _raidParser;
 
-        public ThatsMyBisClientFactory(IOptions<ThatsMyBisConfig> configuration, IRosterParser rosterParser, IRaidParser raidParser)
+        public ThatsMyBisClientFactory(IOptions<ThatsMyBisConfiguration> configuration, IRosterParser rosterParser, IRaidParser raidParser)
         {
             _configuration = configuration;
             _rosterParser = rosterParser;

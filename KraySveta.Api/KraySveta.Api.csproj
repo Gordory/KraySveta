@@ -13,17 +13,19 @@
     <ItemGroup>
         <PackageReference Include="LightInject" Version="6.4.0" />
         <PackageReference Include="LightInject.Microsoft.AspNetCore.Hosting" Version="2.3.5" />
+        <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
         <PackageReference Include="morelinq" Version="3.3.2" />
         <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\KraySveta.Api.DataLayer\KraySveta.Api.DataLayer.csproj" />
       <ProjectReference Include="..\KraySveta.External.Discord\KraySveta.External.Discord.csproj" />
       <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
     </ItemGroup>
 
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="; Move all assemblies and related files to lib folder&#xD;&#xA;ROBOCOPY &quot;$(TargetDir) &quot; &quot;$(TargetDir)lib\ &quot; /XF KraySveta*.dll *.exe *.config *.json *.manifest $(AssemblyName)*.manifest /XD lib logs config /E /IS /MOVE&#xD;&#xA;if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25" />
-    </Target>
+<!--    <Target Name="PostBuild" AfterTargets="PostBuildEvent">-->
+<!--        <Exec Command="; Move all assemblies and related files to lib folder&#xD;&#xA;ROBOCOPY &quot;$(TargetDir) &quot; &quot;$(TargetDir)lib\ &quot; /XF KraySveta*.dll *.exe *.config *.json *.manifest $(AssemblyName)*.manifest /XD lib logs config /E /IS /MOVE&#xD;&#xA;if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25" />-->
+<!--    </Target>-->
 </Project>

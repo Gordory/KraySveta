@@ -1,10 +1,13 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using KraySveta.Api.DataLayer.Options;
+using KraySveta.External.ThatsMyBis;
 using LightInject;
 using LightInject.Microsoft.AspNetCore.Hosting;
 using LightInject.Microsoft.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -33,6 +36,12 @@ namespace KraySveta.Api
         private static IHostBuilder CreateHostBuilder(string[] args, IServiceContainer container) =>
             Host.CreateDefaultBuilder(args)
                 .UseServiceProviderFactory(new LightInjectServiceProviderFactory(container))
+                .ConfigureServices((hostContext, serviceCollection) =>
+                {
+                    serviceCollection.AddOptions();
+                    serviceCollection.Configure<MongoDbConfiguration>(
+                        hostContext.Configuration.GetSection(MongoDbConfiguration.ConfigName));
+                })
                 .ConfigureLogging(builder =>
                 {
                     builder.AddConsole();

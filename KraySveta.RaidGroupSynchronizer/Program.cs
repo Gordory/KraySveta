@@ -41,10 +41,10 @@ namespace KraySveta.RaidGroupSynchronizer
                 {
                     serviceCollection.AddHostedService<Daemon>();
                     serviceCollection.AddOptions();
-                    serviceCollection.Configure<ThatsMyBisConfig>(
-                        hostContext.Configuration.GetSection(ThatsMyBisConfig.ConfigName));
-                    serviceCollection.Configure<DiscordBotConfig>(
-                        hostContext.Configuration.GetSection(DiscordBotConfig.ConfigName));
+                    serviceCollection.Configure<ThatsMyBisConfiguration>(
+                        hostContext.Configuration.GetSection(ThatsMyBisConfiguration.ConfigName));
+                    serviceCollection.Configure<DiscordBotConfiguration>(
+                        hostContext.Configuration.GetSection(DiscordBotConfiguration.ConfigName));
                     serviceCollection.Configure<DaemonConfig>(
                         hostContext.Configuration.GetSection(DaemonConfig.ConfigName));
                 })

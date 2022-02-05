@@ -1,6 +1,6 @@
 namespace KraySveta.External.ThatsMyBis
 {
-    public class ThatsMyBisConfig
+    public class ThatsMyBisConfiguration
     {
         public const string ConfigName = "ThatsMyBis";
 

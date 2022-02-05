@@ -1,6 +1,6 @@
 namespace KraySveta.External.Discord
 {
-    public class DiscordBotConfig
+    public class DiscordBotConfiguration
     {
         public const string ConfigName = "DiscordBot";
 

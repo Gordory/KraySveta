@@ -10,9 +10,9 @@ namespace KraySveta.External.Discord
     public class GuildProvider : CacheAsyncProvider<IGuild>
     {
         private readonly IDiscordClient _discordClient;
-        private readonly IOptions<DiscordBotConfig> _configuration;
+        private readonly IOptions<DiscordBotConfiguration> _configuration;
 
-        public GuildProvider(IDiscordClient discordClient, IOptions<DiscordBotConfig> configuration, CancellationToken token) : base(token: token)
+        public GuildProvider(IDiscordClient discordClient, IOptions<DiscordBotConfiguration> configuration, CancellationToken token) : base(token: token)
         {
             _discordClient = discordClient;
             _configuration = configuration;
