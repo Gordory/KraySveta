@@ -5,13 +5,13 @@ using Timer = System.Timers.Timer;
 
 namespace KraySveta.Core
 {
-    public abstract class CacheAsyncProvider<TValue> : IProvider<TValue>
+    public abstract class CacheAsyncProvider<TOut> : IProvider<TOut>
     {
         private readonly CancellationToken _token;
         private readonly Timer _timer;
 
         private bool _hasValue = false;
-        private TValue _value;
+        private TOut _value;
 
         protected CacheAsyncProvider(TimeSpan? updateTimeout = null, CancellationToken? token = null)
         {
@@ -20,7 +20,7 @@ namespace KraySveta.Core
             _timer.Elapsed += async (_, _) => await UpdateValue(_token);
         }
 
-        public async ValueTask<TValue> GetAsync()
+        public async ValueTask<TOut> GetAsync()
         {
             if (_hasValue)
             {
@@ -39,6 +39,6 @@ namespace KraySveta.Core
             _value = value;
         }
 
-        protected abstract ValueTask<TValue> GetValueAsync(CancellationToken token);
+        protected abstract ValueTask<TOut> GetValueAsync(CancellationToken token);
     }
 }
