@@ -2,12 +2,13 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <AppConfig>app.config</AppConfig>
         <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <RootNamespace>KraySveta.Api</RootNamespace>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

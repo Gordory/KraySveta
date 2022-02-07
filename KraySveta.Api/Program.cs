@@ -1,8 +1,8 @@
 using System;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using KraySveta.Api.DataLayer.Options;
-using KraySveta.External.ThatsMyBis;
 using LightInject;
 using LightInject.Microsoft.AspNetCore.Hosting;
 using LightInject.Microsoft.DependencyInjection;
@@ -45,7 +45,7 @@ namespace KraySveta.Api
                 .ConfigureLogging(builder =>
                 {
                     builder.AddConsole();
-                    builder.AddFile("Logs/KraySveta.Api.{Date}.log");
+                    builder.AddFile($"Logs/{Assembly.GetExecutingAssembly().GetName().Name}.{{Date}}.log");
                 })
                 .ConfigureWebHostDefaults(webBuilder => 
                 {
