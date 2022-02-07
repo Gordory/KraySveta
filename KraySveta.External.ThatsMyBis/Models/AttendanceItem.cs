@@ -1,19 +1,18 @@
-namespace KraySveta.External.ThatsMyBis.Models
+namespace KraySveta.External.ThatsMyBis.Models;
+
+public record AttendanceItem
 {
-    public record AttendanceItem
-    {
-        public int RaidId { get; init; }
+    public int RaidId { get; init; }
 
-        public string CharacterName { get; init; }
+    public string CharacterName { get; init; }
 
-        public double? CreditPercent { get; init; }
+    public double? CreditPercent { get; init; }
 
-        public bool IsExcused { get; init; }
+    public bool IsExcused { get; init; }
 
-        public string? Note { get; init; }
+    public string? Note { get; init; }
 
-        public string? CustomPublicNote { get; init; }
+    public string? CustomPublicNote { get; init; }
 
-        public string? CustomOfficerNote { get; init; }
-    }
+    public string? CustomOfficerNote { get; init; }
 }

@@ -1,9 +1,8 @@
 using System.Threading.Tasks;
 
-namespace KraySveta.Core
+namespace KraySveta.Core;
+
+public interface IProvider<TOut>
 {
-    public interface IProvider<TOut>
-    {
-        ValueTask<TOut> GetAsync();
-    }
+    ValueTask<TOut> GetAsync();
 }

@@ -1,36 +1,36 @@
 using System.Threading.Tasks;
 using Discord;
 using Discord.Rest;
+using KraySveta.External.Discord.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace KraySveta.External.Discord
+namespace KraySveta.External.Discord;
+
+public interface IDiscordClientFactory
 {
-    public interface IDiscordClientFactory
+    Task<IDiscordClient> CreateAsync();
+}
+
+public class DiscordClientFactory : IDiscordClientFactory
+{
+    private readonly IOptions<DiscordBotConfiguration> _configuration;
+
+    public DiscordClientFactory(IOptions<DiscordBotConfiguration> configuration)
     {
-        Task<IDiscordClient> CreateAsync();
+        _configuration = configuration;
     }
 
-    public class DiscordClientFactory : IDiscordClientFactory
+    public async Task<IDiscordClient> CreateAsync()
     {
-        private readonly IOptions<DiscordBotConfiguration> _configuration;
+        var client = new DiscordRestClient(
+            new DiscordRestConfig
+            {
+                DefaultRetryMode = RetryMode.AlwaysRetry
+            });
 
-        public DiscordClientFactory(IOptions<DiscordBotConfiguration> configuration)
-        {
-            _configuration = configuration;
-        }
+        var botToken = _configuration.Value.Token;
+        await client.LoginAsync(TokenType.Bot, botToken).ConfigureAwait(false);
 
-        public async Task<IDiscordClient> CreateAsync()
-        {
-            var client = new DiscordRestClient(
-                new DiscordRestConfig
-                {
-                    DefaultRetryMode = RetryMode.AlwaysRetry
-                });
-
-            var botToken = _configuration.Value.BotToken;
-            await client.LoginAsync(TokenType.Bot, botToken).ConfigureAwait(false);
-
-            return client;
-        }
+        return client;
     }
 }

@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using Discord;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync
+namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync;
+
+public class SyncUser
 {
-    public class SyncUser
-    {
-        public IGuildUser DiscordUser { get; init; }
+    public IGuildUser DiscordUser { get; init; }
 
-        [Obsolete("Not implemented yet")]
-        public Member? TmbMember { get; set; } = null;
+    [Obsolete("Not implemented yet")]
+    public Member? TmbMember { get; set; } = null;
 
-        public IReadOnlyCollection<Character> TmbCharacters { get; init; }
-    }
+    public IReadOnlyCollection<Character> TmbCharacters { get; init; }
 }

@@ -1,6 +1,5 @@
-namespace KraySveta.Api.Reports
+namespace KraySveta.Api.Reports;
+
+public interface IReportOptions
 {
-    public interface IReportOptions
-    {
-    }
 }

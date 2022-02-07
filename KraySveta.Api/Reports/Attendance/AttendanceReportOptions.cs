@@ -1,7 +1,6 @@
-namespace KraySveta.Api.Reports.Attendance
+namespace KraySveta.Api.Reports.Attendance;
+
+public class AttendanceReportOptions : IReportOptions
 {
-    public class AttendanceReportOptions : IReportOptions
-    {
-        public string? RaidGroupName { get; set; }
-    }
+    public string? RaidGroupName { get; set; }
 }

@@ -3,33 +3,31 @@ using System.Threading;
 using System.Threading.Tasks;
 using Discord;
 using KraySveta.Core;
+using KraySveta.External.Discord.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace KraySveta.External.Discord
+namespace KraySveta.External.Discord;
+
+public class GuildProvider : CacheAsyncProvider<IGuild>
 {
-    public class GuildProvider : CacheAsyncProvider<IGuild>
+    private readonly IDiscordClient _discordClient;
+    private readonly IOptions<DiscordServerConfiguration> _serverConfiguration;
+
+    public GuildProvider(IDiscordClient discordClient, IOptions<DiscordServerConfiguration> serverConfiguration, CancellationToken token) : base(token: token)
     {
-        private readonly IDiscordClient _discordClient;
-        private readonly IOptions<DiscordBotConfiguration> _configuration;
+        _discordClient = discordClient;
+        _serverConfiguration = serverConfiguration;
+    }
 
-        public GuildProvider(IDiscordClient discordClient, IOptions<DiscordBotConfiguration> configuration, CancellationToken token) : base(token: token)
-        {
-            _discordClient = discordClient;
-            _configuration = configuration;
-        }
-
-        protected override async ValueTask<IGuild> GetValueAsync(CancellationToken token)
-        {
-            var serverId = _configuration.Value.ServerId;
-            
-            return await _discordClient.GetGuildAsync(
-                serverId, 
-                options: new RequestOptions
-                {
-                    CancelToken = token,
-                    RetryMode = RetryMode.AlwaysRetry,
-                    Timeout = (int) TimeSpan.FromMinutes(1).TotalMilliseconds,
-                });
-        }
+    protected override async ValueTask<IGuild> GetValueAsync(CancellationToken token)
+    {
+        return await _discordClient.GetGuildAsync(
+            _serverConfiguration.Value.Id, 
+            options: new RequestOptions
+            {
+                CancelToken = token,
+                RetryMode = RetryMode.AlwaysRetry,
+                Timeout = (int) TimeSpan.FromMinutes(1).TotalMilliseconds,
+            });
     }
 }

@@ -1,9 +1,8 @@
-namespace KraySveta.Api.Reports
-{
-    public interface IReport
-    {
-        string Filename { get; }
+namespace KraySveta.Api.Reports;
 
-        byte[] Bytes { get; }
-    }
+public interface IReport
+{
+    string Filename { get; }
+
+    byte[] Bytes { get; }
 }

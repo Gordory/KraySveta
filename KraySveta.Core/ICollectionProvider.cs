@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 
-namespace KraySveta.Core
+namespace KraySveta.Core;
+
+public interface ICollectionProvider<TOut> : IProvider<IReadOnlyCollection<TOut>>
 {
-    public interface ICollectionProvider<TOut> : IProvider<IReadOnlyCollection<TOut>>
-    {
-    }
 }

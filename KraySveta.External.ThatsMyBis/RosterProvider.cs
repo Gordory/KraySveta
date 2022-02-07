@@ -4,20 +4,19 @@ using System.Threading.Tasks;
 using KraySveta.Core;
 using KraySveta.External.ThatsMyBis.Models;
 
-namespace KraySveta.External.ThatsMyBis
+namespace KraySveta.External.ThatsMyBis;
+
+public class RosterProvider : CacheAsyncProvider<Roster>
 {
-    public class RosterProvider : CacheAsyncProvider<Roster>
+    private readonly IThatsMyBisClient _client;
+
+    public RosterProvider(IThatsMyBisClient client, CancellationToken token) : base(TimeSpan.FromHours(1), token)
     {
-        private readonly IThatsMyBisClient _client;
+        _client = client;
+    }
 
-        public RosterProvider(IThatsMyBisClient client, CancellationToken token) : base(TimeSpan.FromHours(1), token)
-        {
-            _client = client;
-        }
-
-        protected override ValueTask<Roster> GetValueAsync(CancellationToken token)
-        {
-            return _client.GetRosterAsync();
-        }
+    protected override ValueTask<Roster> GetValueAsync(CancellationToken token)
+    {
+        return _client.GetRosterAsync();
     }
 }
