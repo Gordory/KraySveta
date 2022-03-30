@@ -19,7 +19,7 @@ namespace KraySveta.External.ThatsMyBis.Models
 
         [JsonProperty("guild_id")]
         public int GuildId { get; init; }
-        
+
         [JsonProperty("description")]
         public string? Description { get; init; }
 

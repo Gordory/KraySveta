@@ -15,7 +15,7 @@ namespace KraySveta.External.ThatsMyBis.Models
         public string Slug { get; init; }
 
         [JsonProperty("role_id")]
-        public int RoleId { get; init; }
+        public int? RoleId { get; init; }
 
         [JsonProperty("role")]
         public Role? Role { get; init; }

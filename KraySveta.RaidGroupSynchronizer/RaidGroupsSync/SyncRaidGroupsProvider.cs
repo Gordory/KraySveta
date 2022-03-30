@@ -33,10 +33,11 @@ namespace KraySveta.RaidGroupSynchronizer.RaidGroupsSync
             var roles = (await _tmbRolesProvider.GetAsync()).ToDictionary(x => x.Id);
             var activeRaidGroups = raidGroups
                 .Where(x => x.DisabledAt == null)
+                .Where(x => x.RoleId != null)
                 .Select(x => new SyncRaidGroup
                 {
                     TmbRaidGroup = x,
-                    TmbRole = roles[x.RoleId],
+                    TmbRole = roles[x.RoleId!.Value],
                 })
                 .ToDictionary(x => x.TmbRole.DiscordRoleId);
 
