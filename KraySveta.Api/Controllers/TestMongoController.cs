@@ -27,14 +27,7 @@ public class TestMongoController : ControllerBase
         _mongoDbConfiguration = mongoDbConfiguration;
         _logger = logger;
 
-        var connectionString = string.Format(
-            "mongodb://{0}:{1}@{2}:{3}/{4}",
-            _mongoDbConfiguration.Value.Login,
-            _mongoDbConfiguration.Value.Password,
-            _mongoDbConfiguration.Value.Address,
-            _mongoDbConfiguration.Value.Port,
-            _mongoDbConfiguration.Value.Database);
-
+        var connectionString = _mongoDbConfiguration.Value.ToString();
         var mongoDbClient = new MongoClient(connectionString);
 
         var database = mongoDbClient.GetDatabase(_mongoDbConfiguration.Value.Database);

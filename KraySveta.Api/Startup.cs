@@ -1,3 +1,4 @@
+using KraySveta.Api.DataLayer.Options;
 using LightInject;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -22,6 +23,10 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+
+        var mongoDbConfigurationSection = Configuration.GetSection(MongoDbConfiguration.ConfigPath);
+        var mongoDbConfiguration = mongoDbConfigurationSection.Get<MongoDbConfiguration>();
+        services.Configure<MongoDbConfiguration>(mongoDbConfigurationSection);
 
         services
             .AddAuthentication(options =>

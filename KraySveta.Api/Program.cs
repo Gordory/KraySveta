@@ -39,8 +39,6 @@ internal static class Program
             .ConfigureServices((hostContext, serviceCollection) =>
             {
                 serviceCollection.AddOptions();
-                serviceCollection.Configure<MongoDbConfiguration>(
-                    hostContext.Configuration.GetSection(MongoDbConfiguration.ConfigPath));
             })
             .ConfigureLogging(builder =>
             {
