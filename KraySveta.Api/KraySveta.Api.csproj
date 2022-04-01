@@ -12,13 +12,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="6.0.3" />
-        <PackageReference Include="LightInject" Version="6.4.0" />
+        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="6.0.5" />
+        <PackageReference Include="LightInject" Version="6.4.1" />
         <PackageReference Include="LightInject.Microsoft.AspNetCore.Hosting" Version="2.3.5" />
-        <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+        <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
         <PackageReference Include="morelinq" Version="3.3.2" />
-        <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+        <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0-dev-00067" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
     </ItemGroup>
 
     <ItemGroup>

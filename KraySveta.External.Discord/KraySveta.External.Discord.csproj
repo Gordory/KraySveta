@@ -7,9 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Discord.Net" Version="2.4.0" />
-      <PackageReference Include="LightInject" Version="6.4.0" />
-      <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+      <PackageReference Include="Discord.Net" Version="3.4.1" />
+      <PackageReference Include="LightInject" Version="6.4.1" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0-preview.2.22152.2" />
     </ItemGroup>
 
     <ItemGroup>
