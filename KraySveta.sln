@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.RaidGroupSynchron
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api.DataLayer", "KraySveta.Api.DataLayer\KraySveta.Api.DataLayer.csproj", "{EBB78778-9505-434C-8FBF-59133873E65A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.App", "KraySveta.App\KraySveta.App.csproj", "{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{EBB78778-9505-434C-8FBF-59133873E65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB78778-9505-434C-8FBF-59133873E65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB78778-9505-434C-8FBF-59133873E65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
