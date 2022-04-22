@@ -1,20 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.External.Discord", "KraySveta.External.Discord\KraySveta.External.Discord.csproj", "{8705458A-5456-4191-B283-9D4AFF5EB9F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.External.Discord", "src\KraySveta.External.Discord\KraySveta.External.Discord.csproj", "{8705458A-5456-4191-B283-9D4AFF5EB9F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Core", "KraySveta.Core\KraySveta.Core.csproj", "{3BB1F84F-DEDE-4019-AFA3-D6A60649324F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Core", "src\KraySveta.Core\KraySveta.Core.csproj", "{3BB1F84F-DEDE-4019-AFA3-D6A60649324F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.External.ThatsMyBis", "KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj", "{71B1B795-433D-4E92-81E0-87EA66D64CD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.External.ThatsMyBis", "src\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj", "{71B1B795-433D-4E92-81E0-87EA66D64CD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api", "KraySveta.Api\KraySveta.Api.csproj", "{686F4EAA-01BD-4F70-803C-993C7E0ED2C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api", "src\KraySveta.Api\KraySveta.Api.csproj", "{686F4EAA-01BD-4F70-803C-993C7E0ED2C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Tests", "KraySveta.Tests\KraySveta.Tests.csproj", "{8D96CB62-827D-462E-92D2-8EDED04DEA5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Tests", "tests\KraySveta.Tests\KraySveta.Tests.csproj", "{8D96CB62-827D-462E-92D2-8EDED04DEA5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.RaidGroupSynchronizer", "KraySveta.RaidGroupSynchronizer\KraySveta.RaidGroupSynchronizer.csproj", "{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.RaidGroupSynchronizer", "src\KraySveta.RaidGroupSynchronizer\KraySveta.RaidGroupSynchronizer.csproj", "{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.DataLayer", "KraySveta.DataLayer\KraySveta.DataLayer.csproj", "{EBB78778-9505-434C-8FBF-59133873E65A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.DataLayer", "src\KraySveta.DataLayer\KraySveta.DataLayer.csproj", "{EBB78778-9505-434C-8FBF-59133873E65A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.App", "KraySveta.App\KraySveta.App.csproj", "{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.App", "src\KraySveta.App\KraySveta.App.csproj", "{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.ServiceLayer", "src\KraySveta.ServiceLayer\KraySveta.ServiceLayer.csproj", "{3BF76577-7E9B-40CD-AEA7-0BE114589AAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +56,9 @@ Global
 		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF76577-7E9B-40CD-AEA7-0BE114589AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF76577-7E9B-40CD-AEA7-0BE114589AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF76577-7E9B-40CD-AEA7-0BE114589AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF76577-7E9B-40CD-AEA7-0BE114589AAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

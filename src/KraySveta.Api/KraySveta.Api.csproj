@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\KraySveta.Api.DataLayer\KraySveta.Api.DataLayer.csproj" />
+      <ProjectReference Include="..\KraySveta.DataLayer\KraySveta.DataLayer.csproj" />
       <ProjectReference Include="..\KraySveta.External.Discord\KraySveta.External.Discord.csproj" />
       <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
     </ItemGroup>

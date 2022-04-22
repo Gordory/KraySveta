@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
+      <ProjectReference Include="..\..\src\KraySveta.External.ThatsMyBis\KraySveta.External.ThatsMyBis.csproj" />
     </ItemGroup>
 
     <ItemGroup>
