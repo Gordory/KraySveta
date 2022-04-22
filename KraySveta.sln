@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Tests", "KraySvet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.RaidGroupSynchronizer", "KraySveta.RaidGroupSynchronizer\KraySveta.RaidGroupSynchronizer.csproj", "{4D8E0B17-C7B7-4AB0-BF77-1FF6C4E18FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.Api.DataLayer", "KraySveta.Api.DataLayer\KraySveta.Api.DataLayer.csproj", "{EBB78778-9505-434C-8FBF-59133873E65A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.DataLayer", "KraySveta.DataLayer\KraySveta.DataLayer.csproj", "{EBB78778-9505-434C-8FBF-59133873E65A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KraySveta.App", "KraySveta.App\KraySveta.App.csproj", "{96CE2655-CC3C-4705-9052-B4BF7FCC3C0C}"
 EndProject

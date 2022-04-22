@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
+        <AssemblyName>KraySveta.DataLayer</AssemblyName>
+        <RootNamespace>KraySveta.DataLayer</RootNamespace>
     </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace KraySveta.Api.DataLayer.Options;
+namespace KraySveta.DataLayer.Options;
 
 public class MongoDbConfiguration
 {
