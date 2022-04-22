@@ -1,7 +1,5 @@
-using System.Text;
+using AspNet.Security.OAuth.Discord;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 
 namespace KraySveta.App;
 
@@ -18,29 +16,15 @@ internal static class Program
             .AddAuthentication(options =>
             {
                 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = DiscordAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
             .AddCookie()
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = builder.Configuration.GetValue<string>("Jwt:Issuer"),
-                    ValidAudience = builder.Configuration.GetValue<string>("Jwt:Audience"),
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(
-                            builder.Configuration.GetValue<string>("Jwt:EncryptionKey")))
-                };
-            })
             .AddDiscord(options =>
             {
-                // callback path: "/signin-discord"
                 options.ClientId = builder.Configuration.GetValue<string>("Discord:OAuth2:ClientId");
                 options.ClientSecret = builder.Configuration.GetValue<string>("Discord:OAuth2:ClientSecret");
+                options.SaveTokens = true;
 
                 // todo: (Ильиных Никита Сергеевич/01.04.2022/21:46): access denied path
             });

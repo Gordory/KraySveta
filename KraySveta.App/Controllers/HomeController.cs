@@ -25,7 +25,7 @@ public class HomeController : Controller
         return View();
     }
 
-    [Authorize(AuthenticationSchemes = DiscordAuthenticationDefaults.AuthenticationScheme)]
+    [Authorize]
     public IActionResult Secret()
     {
         return View();
