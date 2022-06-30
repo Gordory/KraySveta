@@ -77,22 +77,32 @@ public class Daemon : IHostedService
             using (_logger.BeginScope("[{Name}]", syncRaidGroup.TmbRaidGroup.Name))
             {
                 var isMainGroup = mainRaidGroupRoleIds.Contains(syncRaidGroup.TmbRole.DiscordRoleId);
-                var characters = syncRaidGroup.SyncUsers
+
+                var actualRaidGroupCharacters = syncRaidGroups
+                    .SelectMany(x => x.SyncUsers)
+                    .SelectMany(x => x.TmbCharacters)
+                    .Where(character => isMainGroup
+                        ? IsMemberOfMainRaidGroup(character, syncRaidGroup.TmbRaidGroup.Id)
+                        : IsMemberOfGeneralRaidGroup(character, syncRaidGroup.TmbRaidGroup.Id))
+                    .ToArray();
+
+                var expectedCharacters = syncRaidGroup.SyncUsers
                     .Select(SelectCharacter)
                     .Where(x => x != null)
                     .ToArray();
 
-                switch (isMainGroup)
+                if (expectedCharacters.SequenceEqual(actualRaidGroupCharacters))
                 {
-                    case true when characters.All(character => character!.RaidGroupId == syncRaidGroup.TmbRaidGroup.Id):
-                        _logger.LogInformation("Main Raid Group '{Name}' already synchronized", syncRaidGroup.TmbRaidGroup.Name);
-                        continue;
-                    case false when characters.All(character => character!.SecondaryRaidGroups.Any(raidGroup => raidGroup.Id == syncRaidGroup.TmbRaidGroup.Id)):
-                        _logger.LogInformation("General Raid Group '{Name}' already synchronized", syncRaidGroup.TmbRaidGroup.Name);
-                        continue;
+                    if (isMainGroup)
+                        _logger.LogInformation("Main Raid Group '{Name}' already synchronized",
+                            syncRaidGroup.TmbRaidGroup.Name);
+                    else
+                        _logger.LogInformation("General Raid Group '{Name}' already synchronized",
+                            syncRaidGroup.TmbRaidGroup.Name);
+                    continue;
                 }
 
-                await _thatsMyBisClient.UpdateRaidGroupAsync(syncRaidGroup.TmbRaidGroup, characters!, isMainGroup);
+                await _thatsMyBisClient.UpdateRaidGroupAsync(syncRaidGroup.TmbRaidGroup, expectedCharacters!, isMainGroup);
 
                 if (isMainGroup)
                     _logger.LogInformation("Main Raid Group '{Name}' successfully synchronized", syncRaidGroup.TmbRaidGroup.Name);
@@ -139,5 +149,15 @@ public class Daemon : IHostedService
     private static string GetNickname(IGuildUser discordUser)
     {
         return discordUser.Nickname ?? discordUser.Username;
+    }
+
+    private static bool IsMemberOfMainRaidGroup(Character character, int raidGroupId)
+    {
+        return character!.RaidGroupId == raidGroupId;
+    }
+
+    private static bool IsMemberOfGeneralRaidGroup(Character character, int raidGroupId)
+    {
+        return character.SecondaryRaidGroups.Any(raidGroup => raidGroup.Id == raidGroupId);
     }
 }
